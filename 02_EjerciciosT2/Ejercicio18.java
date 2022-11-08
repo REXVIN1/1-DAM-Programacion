@@ -19,10 +19,9 @@ public class Ejercicio18 {
         String correo = new Scanner(System.in).nextLine();
         
         int posicion = correo.indexOf("@");
-        int caracteres = correo.length();
         
         String substract1 = correo.substring(0, posicion);
-        String substract2 = correo.substring(posicion+1, caracteres);
+        String substract2 = correo.substring(posicion+1, correo.length());
         
         System.out.println("-Tu nombre de usuario es: "+substract1);
         System.out.println(".Tu dominio es: "+substract2);
