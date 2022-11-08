@@ -18,11 +18,9 @@ public class Ejercicio14 {
         
         
         System.out.println("Escriba una frase:");
-        String frase = new Scanner(System.in).nextLine();
+        String frase = new Scanner(System.in).nextLine();        
         
-        int posicion = frase.length()/2;
-        
-        char letra = frase.charAt(posicion);
+        char letra = frase.charAt(frase.length()/2);
         
         System.out.println("\n "+"Letra central: "+letra);
     }
