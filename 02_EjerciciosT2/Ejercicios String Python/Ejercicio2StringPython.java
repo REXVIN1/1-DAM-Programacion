@@ -19,7 +19,7 @@ public class Ejercicio2StringPython {
         
         System.out.println("Cadena normal: "+cadena);
         
-        cadena = cadena.replaceAll("\\s+", "");
+        cadena = cadena.replaceAll(" ", "");
         
         System.out.println("Cadena sin espacios: "+cadena);
                                                                                                                                       
