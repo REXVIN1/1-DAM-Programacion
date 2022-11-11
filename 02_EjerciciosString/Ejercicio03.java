@@ -17,22 +17,16 @@ public class Ejercicio3StringPython {
         System.out.println("Traductor de latin"+"\n");
         System.out.println("Escriba palabra: ");
         String palabra = new Scanner(System.in).nextLine();
-        
-        String vocal1 = "a";
-        String vocal2 = "e";
-        String vocal3 = "i";
-        String vocal4 = "o";
-        String vocal5 = "u";
-        
+                
         int caracteres = palabra.length();
         int palabra_cortada = caracteres-1;
         String palabra_cortada1 = palabra.substring(0, palabra_cortada);
         
-        boolean a = palabra.endsWith(vocal1);
-        boolean e = palabra.endsWith(vocal2);
-        boolean i = palabra.endsWith(vocal3);
-        boolean o = palabra.endsWith(vocal4);
-        boolean u = palabra.endsWith(vocal5);
+        boolean a = palabra.endsWith("a");
+        boolean e = palabra.endsWith("e");
+        boolean i = palabra.endsWith("i");
+        boolean o = palabra.endsWith("o");
+        boolean u = palabra.endsWith("u");
         
         if(a==true||e==true||i==true||o==true||u==true){
             System.out.println("\n"+palabra_cortada1+"us");
