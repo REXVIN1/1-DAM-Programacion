@@ -17,7 +17,7 @@ public class Ejercicio4StringPyhton {
         System.out.println("Escriba 5 codigos del 1 al 255:");
         String caracteres = new Scanner(System.in).nextLine(); 
         
-        String[] fragmento = caracteres.split(" ");
+        String[] fragmento = caracteres.split("\\s+");
         
         if(fragmento.length==1){
             String f0 = fragmento[0];
