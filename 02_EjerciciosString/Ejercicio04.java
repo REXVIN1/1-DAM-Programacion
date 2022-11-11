@@ -14,7 +14,7 @@ public class Ejercicio4StringPyhton {
     public static void main(String[] args) {
         System.out.println("Codificador de cadenas: el resultado será una cadena que se ha obtenido cambiando cada carácter por el carácter cuyo código ASCII es n unidades mayor."+"\n");  
         
-        System.out.println("Escriba cinco codigos del 1 al 255:");
+        System.out.println("Escriba 5 codigos del 1 al 255:");
         String caracteres = new Scanner(System.in).nextLine(); 
         
         String[] fragmento = caracteres.split(" ");
