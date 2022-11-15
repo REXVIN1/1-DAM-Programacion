@@ -21,8 +21,8 @@ public class Ejercicio25 {
         try{
             Scanner escaner = new Scanner(archivo);
             System.out.println("Linea 1: "+escaner.nextLine()+"\n"+"Linea 2: "+escaner.nextLine());                        
-        }catch(Exception cagaste){
-            System.out.println("CAGASTE");
+        }catch(Exception error){
+            System.out.println("Surgió un error");
         }                    
     }    
 }
