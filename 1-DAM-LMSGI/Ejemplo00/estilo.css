@@ -1,0 +1,27 @@
+h1{
+	color: red;
+}
+section{
+	color: green;
+}
+body{
+	background-color: rgb(53, 53, 53);
+}
+p{
+	color: white; text-align: center;
+}
+span{
+	color: red;
+}
+#copy{
+	color: black;
+}
+.colororange{
+	color: orange;
+}
+footer{
+	text-align: right;
+}
+hr{
+	border-color: black;
+}

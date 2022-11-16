@@ -1,0 +1,45 @@
+#verderaro{
+	color: seagreen; 
+	font-weight: bold;
+}
+#titulo1{
+	color: blue;
+	font-weight: initial;
+	margin-left: 140px
+}
+#verde{
+	color:rgb(68, 136, 68);
+}
+#rojo{
+	color: red;
+}
+#naranja{
+	color: orange;
+}
+#verde{
+	color: green;
+}
+#verdeoliva{
+	color: olive;
+}
+#azul{
+	color: blue;
+}
+#morado{
+	color: purple;
+}
+#rosa{
+	color:deeppink;
+}
+table{
+	border: 1px solid black;
+}
+tr{
+	border: 1px solid black;
+}
+td{
+	border: 1px solid black;
+}
+h1{
+	font-size: 30px;
+}
