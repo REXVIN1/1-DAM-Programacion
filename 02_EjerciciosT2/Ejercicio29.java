@@ -24,13 +24,9 @@ public class Ejercicio29 {
         
         //ERROR: ArrayIndexOutOfBoundsException
         System.out.println("\nb) Un programa necesita recuperar dos argumentos de la línea de comandos y no se pasa" +
-"ninguno");
-        File archivo = new File("C:\\Users\\usuario-mañana\\Desktop\\archivo.txt");
-        try{
-            Scanner escaner = new Scanner(archivo);
-        }catch(Exception error){
-            System.out.println("Surgió un problema");
-        }
+"ninguno");       
+        System.out.println("Argumento 1: " + args[0]);
+        System.out.println("Argumento 2: " + args[1]);                    
                        
         //ERROR: ArrayIndexOutOfBoundsException
         System.out.println("c) Creamos una caja vacía. Recuperamos el mensaje que tiene y mostramos por pantalla\n" +
