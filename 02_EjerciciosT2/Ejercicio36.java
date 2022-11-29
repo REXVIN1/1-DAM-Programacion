@@ -2,13 +2,11 @@
 package ejercicio36;
 import java.lang.*;
 
-/* @author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
+/*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
 public class Ejercicio36 {
 
-    /**
-     * @param args the command line arguments
-     */
+    /*@param args the command line arguments*/
     
     public static void main(String[] args) {
         System.out.println("Ejercicio 36 : En la “Librería Estándar de Java” está la clase Math, que sirve para realizar\n" +
