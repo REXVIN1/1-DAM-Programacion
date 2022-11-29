@@ -18,11 +18,11 @@ public class Ejercicio35 {
         
         System.out.println("a. Compáralos con el signo == como si fuesen tipos básicos. ¿Qué sucede?");
         boolean r1 = c1==c2;
-        System.out.println("El resultado da '"+r1+"' por lo tanto no se compara correctamente.\n");
+        System.out.println("El resultado da '"+r1+"' porque no pueden existir dos archivos iguales en la memoria.\n");
         
         System.out.println("b. Compáralos con el método equals. ¿Qué sucede?");
         boolean r2 = c1.equals(c2);
-        System.out.println("El resultado da '"+r2+"' por lo tanto se compara correctamente.\n");
+        System.out.println("El resultado da '"+r2+"' porque se comparan directamente los objetos creados.\n");
         
         System.out.println("c. Muestra los hashCode de dichos objetos. ¿Coinciden?");
         System.out.println("HashCode canción 1: "+c1.hashCode());
