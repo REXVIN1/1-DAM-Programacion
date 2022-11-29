@@ -17,7 +17,7 @@ public class Ejercicio36 {
         double r1;
         
         System.out.println("a. La raíz cuadrada de 150");
-        double r1 = Math.pow(150,2);
+        r1 = Math.pow(150,2);
         System.out.println("Resultado: "+r1);
         
         System.out.println("\nb. 2 elevado a 9, y se divide entre el logaritmo neperiano de 6");
