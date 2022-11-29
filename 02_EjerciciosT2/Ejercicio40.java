@@ -15,9 +15,9 @@ public class Ejercicio40 {
         
         System.out.println("Número de procesadores: "+Runtime.getRuntime().availableProcessors());
         
-        double mb = Runtime.getRuntime().totalMemory()/8/1000;
+        double bytes = Runtime.getRuntime().totalMemory()/8;
         
-        System.out.println("Cantidad de memoria: "+mb+" Mb");
+        System.out.println("Cantidad de memoria: "+bytes+" Bytes");
     }
 
 }
