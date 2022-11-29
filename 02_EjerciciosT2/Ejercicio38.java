@@ -12,10 +12,10 @@ public class Ejercicio38 {
     public static void main(String[] args) {
         System.out.println("Ejercicio 38 : Haz un programa que calcule las dos soluciones de la ecuación x^2 − 5x + 6\n");
                 
-        int a=1,b=5
+        int a=1,b=-5,c=6;
         
-        double r1 = (-5+Math.sqrt(Math.pow(-5, 2)-4*1*6))/2*1;
-        double r2 = (-5-Math.sqrt(Math.pow(-5, 2)-4*1*6))/2*1;
+        double r1 = (-(-b)+Math.sqrt(Math.pow(b, 2)-4*a*c))/2*a;
+        double r2 = (-(-b)-Math.sqrt(Math.pow(b, 2)-4*a*c))/2*a;
         
         System.out.println("Resultado:");
         System.out.println("x = "+r1+" y x = "+r2);
