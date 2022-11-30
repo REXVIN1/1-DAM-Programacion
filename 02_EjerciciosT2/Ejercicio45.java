@@ -22,7 +22,7 @@ public class Ejercicio45 {
         
         LocalDate hoy = LocalDate.of(2100, Month.FEBRUARY, 28);
         
-        System.out.println(""+hoy.format(DateTimeFormatter.ofPattern("dd MMMM yyy")));
+        System.out.println("El dia de la semana es: "+hoy.getDayOfWeek());
     }
     
 }
