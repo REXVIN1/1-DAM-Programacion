@@ -30,7 +30,7 @@ public class Ejercicio46 {
             Thread.sleep(n2);
             Instant i2 = Instant.now();
             
-            System.out.println(Duration.between(i1, i2));
+            System.out.println("La duración entre i1 e i2 es: "+Duration.between(i1, i2));
         }catch(Exception ex){
             System.out.println("Error: "+ex.getMessage());
         }
