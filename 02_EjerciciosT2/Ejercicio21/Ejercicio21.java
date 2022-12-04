@@ -18,37 +18,34 @@ public class Ejercicio21 {
 "contrario, el programa mostrará el número total de archivos y carpetas que contiene.");
         
         System.out.println("\nIntroduzca la ruta de la carpeta para ver sus archivos y otras carpetas:");
-        String ruta = new Scanner(System.in).nextLine();        
-        File carpeta = new File(ruta.replaceAll("\\s+", ""));
+        String ruta = new Scanner(System.in).nextLine();
+        File file5 = new File(ruta);            
         File[] lista = {};
+        lista = file5.listFiles();
+        int valor = 0,archivos=0,carpetas=0;
         
-        lista = carpeta.listFiles();
-        
-        int i = 0, a = 0, c = 0; 
-        
-        if(carpeta.isDirectory()){
-            System.out.println("\n--------------------------------------");
-            System.out.println("                LISTA         ");
-            System.out.println("--------------------------------------");
-            while(i<lista.length){
-                if(lista[i].isFile()==true){ 
-                    System.out.println("Archivo "+(i+1)+": "+lista[i].getName());
-                    i++;
-                    a++;
-                }                     
-                if(lista[i].isDirectory()==true){                
-                    System.out.println("Carpeta "+(i+1)+": "+lista[i].getName());
-                    i++;
-                    c++;
-                }
-            }
-            System.out.println("--------------------------------------");
-            System.out.println("Archivos totales: "+a);
-            System.out.println("Carpetas totales: "+c);
-            System.out.println("--------------------------------------");
-        }else{
-            System.out.println("\nPorfavor, introduzca una ruta a un directorio");
-        } 
+        System.out.println("\nARCHIVOS Y CARPETAS");
+        System.out.println("ARCHIVOS-----------------------------");
+        while(valor<lista.length){
+            if(lista[valor].isFile()){
+                archivos++;
+                System.out.println("Archivo "+(archivos)+": "+lista[valor].getName());
+                valor++;  
+            }else{
+                valor++;
+            }      
+        }
+        valor = 0;
+        System.out.println("\nCARPETAS-----------------------------");
+        while(valor<lista.length){
+            if(lista[valor].isDirectory()){
+                carpetas++;
+                System.out.println("Carpeta "+(carpetas)+": "+lista[valor].getName());
+                valor++;  
+            }else{
+                valor++;
+            }      
+        }
     }
 
 }
