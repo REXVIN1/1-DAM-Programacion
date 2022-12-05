@@ -28,7 +28,7 @@ public class Ejercicio24 {
                 writer.println(frase2); 
                 writer.close();
             }catch(Exception existe_archivo){
-                System.out.println("\nNo tienes permiso");                   
+                System.out.println("\nError: "+existe_archivo.getMessage());                  
             }                        
     }
     
