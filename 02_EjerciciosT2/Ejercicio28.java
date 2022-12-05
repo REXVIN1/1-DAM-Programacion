@@ -23,7 +23,7 @@ public class Ejercicio28 {
             InetAddress ID = InetAddress.getByName(nombre);
             System.out.println("\nLa IP de "+nombre+" es "+ID.getHostAddress());
         }catch(Exception fallo){
-            System.out.println("\nHa surgido un problema");
+            System.out.println("\nError: "+fallo.getMessage());
         }
     }
     
