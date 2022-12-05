@@ -31,7 +31,7 @@ public class Ejercicio23 {
             c1.ingresarDinero(cantidad);
             System.out.println("Saldo: "+c1.getSaldo(acceso));
         }catch(Exception contraseña_aceptada){
-            System.out.println("\nIntroduzca la contraseña correctamente");
+            System.out.println("\nError: "+contraseña_aceptada.getMessage());
         }
         
         System.out.println("\nIntroduzca la contraseña: ");
@@ -44,7 +44,7 @@ public class Ejercicio23 {
             c1.sacarDinero(cantidad, acceso2);
             System.out.println("Saldo: "+c1.getSaldo(acceso2));
         }catch(Exception contraseña_aceptada2){
-            System.out.println("\nIntroduzca la contraseña correctamente");
+            System.out.println("\nError: "+contraseña_aceptada2.getMessage());
         }
     }
     
