@@ -35,7 +35,7 @@ public class Ejercicio27 {
                 System.out.println("No se puede hacer ping");
             }
         }catch(Exception problema){
-            System.out.println("Surgió un problema");
+            System.out.println("\nError: "+problema.getMessage());
         }
     }
     
