@@ -26,7 +26,7 @@ public class Ejercicio22 {
         try{
             System.out.println("Saldo: "+c1.getSaldo(acceder));
         }catch(Exception saldo){
-            System.out.println("\nIntroduzca la contraseña correcta");
+            System.out.println("\nError: "+saldo.getMessage());
         }  
         
         System.out.println("\nIntroduzca la contraseña para sacar dinero:");
@@ -38,7 +38,7 @@ public class Ejercicio22 {
             c1.sacarDinero(cantidad, contraseña); 
             System.out.println("Saldo: "+c1.getSaldo(acceder2));    
         }catch(Exception saldo_final){
-            System.out.println("Introduzca la contraseña correcta");
+            System.out.println("\nError: "+saldo_final.getMessage());
         }
         
             
