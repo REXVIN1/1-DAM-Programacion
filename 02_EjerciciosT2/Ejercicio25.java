@@ -22,7 +22,7 @@ public class Ejercicio25 {
             Scanner escaner = new Scanner(archivo);
             System.out.println("Linea 1: "+escaner.nextLine()+"\n"+"Linea 2: "+escaner.nextLine());                        
         }catch(Exception error){
-            System.out.println("Surgió un error");
+            System.out.println("\nError: "+error.getMessage());  
         }                    
     }    
 }
