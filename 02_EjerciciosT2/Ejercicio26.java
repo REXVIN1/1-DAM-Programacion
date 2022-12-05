@@ -25,7 +25,7 @@ public class Ejercicio26 {
             Thread tread = new Thread();
             tread.sleep(segundos2);
         }catch(Exception problema){
-            System.out.println("Ha surgido un problema");
+            System.out.println("\nError: "+problema.getMessage());
         }  
         System.out.println("\nSe ha completado");
     }    
