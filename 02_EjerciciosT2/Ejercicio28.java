@@ -1,8 +1,9 @@
 /*
  */
 package ejercicio28;
-import java.net.*;
-import java.util.*;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Scanner;
 /**
  *
  * @author Kevin Gómez Valderas<kgomval118@g.educaand.es>
@@ -20,10 +21,10 @@ public class Ejercicio28 {
         String nombre = new Scanner(System.in).nextLine();
         
         try{
-            InetAddress ID = InetAddress.getByName(nombre);
-            System.out.println("\nLa IP de "+nombre+" es "+ID.getHostAddress());
-        }catch(Exception fallo){
-            System.out.println("\nError: "+fallo.getMessage());
+            InetAddress ia = InetAddress.getByName(nombre);
+            System.out.println("La IP de "+ia.getHostName()+" es "+ia.getHostAddress());
+        }catch(UnknownHostException e){
+            System.out.println("Error: "+e.getMessage());
         }
     }
     
