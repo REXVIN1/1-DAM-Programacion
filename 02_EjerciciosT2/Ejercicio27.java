@@ -1,8 +1,10 @@
 /*
  */
 package ejercicio27;
-import java.util.*;
-import java.net.*;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Scanner;
 /**
  *
  * @author Kevin Gómez Valderas<kgomval118@g.educaand.es>
@@ -18,25 +20,25 @@ public class Ejercicio27 {
 "El ordenador nos indicará si puede hacer ping a la IP indicada, esperando el tiempo que dice la\n" +
 "variable timeout.\n");
         
-        System.out.println("Introduzca una dirección IP:");
+        System.out.println("Escriba una dirección IP:");
         String ip = new Scanner(System.in).nextLine();
-        System.out.println("Introduzca un timeout (en milisegundos):");        
-        int timeout = new Scanner(System.in).nextInt();                
+        System.out.println("\nEscriba el timeout (en milisegundos):");
+        int timeout = new Scanner(System.in).nextInt();
         
-        try{
-            InetAddress IP = InetAddress.getByName(ip);
-            Thread tiempo = new Thread();
-            tiempo.sleep(timeout);
-            boolean ping = IP.isReachable(timeout);
-            System.out.println("\nHaciendo ping a "+IP.getHostAddress()+"...");
-            if(ping==true){
-                System.out.println("¿Puede hacerse ping?: "+ping);
-            }else{
-                System.out.println("No se puede hacer ping");
+        try {
+            InetAddress ia = InetAddress.getByName(ip);
+            Thread.sleep(timeout);
+            try{
+                boolean ping = ia.isReachable(timeout);
+                System.out.println("Haciendo ping a "+ia.getHostAddress()+"..."+ping);
+            }catch(IOException e2){
+                System.out.println("\nError: "+e2.getMessage());
             }
-        }catch(Exception problema){
-            System.out.println("\nError: "+problema.getMessage());
+            
+        } catch (InterruptedException | UnknownHostException e1) {
+            System.out.println("\nError: "+e1.getMessage());
         }
+
     }
     
 }
