@@ -1,8 +1,8 @@
 /*
  */
 package ejercicio23;
-import bpc.daw.objetos.*;
-import java.util.*;
+import bpc.daw.objetos.TarjetaCredito;
+import java.util.Scanner;
 /**
  *
  * @author Kevin Gómez <kgomval118@g.educaand.es>
