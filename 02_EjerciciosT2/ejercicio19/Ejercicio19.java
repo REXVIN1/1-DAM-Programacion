@@ -1,8 +1,8 @@
 /*
  */
 package ejercicio19;
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+import java.io.File;
 /**
  *
  * @author Kevin Gómez Valderas<kgomval118@g.educaand.es>
