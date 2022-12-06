@@ -17,7 +17,7 @@ public class Ejercicio04 {
 "de Mario a su lado. El programa deberá mostrar por pantalla las coordenadas (x,y) en la que se\n" +
 "encuentran los dos muñecos."+"\n");
         
-        Luigi l1 = new Luigi(354 ,354);
+        Luigi l1 = new Luigi(500.0);
         Mario m1 = new Mario(l1,0);
         
         double distancia = l1.getDistanciaOrigen();
