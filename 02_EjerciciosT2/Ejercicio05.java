@@ -16,25 +16,22 @@ public class Ejercicio05 {
 "que el primero dispare dos veces y el segundo tres. Pregunta a los dos cañones cuántas veces\n" +
 "han disparado y muestra dichos valores por pantalla."+"\n");
         
-        Cañon c1,c2 = null;        
-        Disparo d1,d2,d3,d4,d5 = null;
+        Cañon c1 = new Cañon(500,200);
+        Cañon c2 = new Cañon(500,500);
         
-        c1 = new Cañon (500,300); 
-        c2 = new Cañon (500,500);                     
-       
-        d1 = new Disparo(500,300,700,300);
-        d2 = new Disparo(500,300,700,300);
-       
-        d3 = new Disparo(500,500,700,500);
-        d4 = new Disparo(500,500,700,500);
-        d5 = new Disparo(500,500,700,500);        
-        
-        System.out.println("¿Cuántos cañones ha disparado el primer cañón?");
-        int r1 = 2;
-        System.out.println("Ha disparado "+r1+" veces");
-        System.out.println("¿Cuántos cañones ha disparado el segundo cañón?");
-        int r2 = 3;
-        System.out.println("Ha disparado "+r2+" veces");
+        try {
+            c1.disparar(1000, 200);
+            c2.disparar(1000, 500);
+            Thread.sleep(5000);
+            c1.disparar(1000, 200);
+            c2.disparar(1000, 500);
+            Thread.sleep(5000);
+            c2.disparar(1000, 500);
+            System.out.println("Disparos del cañon 1: "+c1.getTotalDisparosRealizados());
+            System.out.println("Disparos del cañon 2: "+c2.getTotalDisparosRealizados());
+        } catch (InterruptedException ex) {
+            System.out.println("Erro: "+ex.getMessage());
+        }
     }
     
 }
