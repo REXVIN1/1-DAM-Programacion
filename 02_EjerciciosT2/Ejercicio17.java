@@ -1,7 +1,7 @@
 /*
  */
 package ejercicio17;
-import java.util.*;
+import java.util.Scanner;
 /**
  *
  * @author Kevin Gómez Valderas<kgomval118@g.educaand.es>
