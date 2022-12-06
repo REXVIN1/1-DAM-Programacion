@@ -1,7 +1,7 @@
 /*
  */
 package ejercicio05;
-import bpc.daw.mario.*;
+import bpc.daw.mario.Cañon;
 /**
  *
  * @author Kevin Gómez <kgomval118@g.educaand.es>
