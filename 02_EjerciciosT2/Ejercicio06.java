@@ -1,8 +1,8 @@
 /*
  */
 package ejercicio06;
-import bpc.daw.mario.*;
-import java.util.*;
+import bpc.daw.mario.Mario;
+import java.util.Scanner;
 /**
  *
  * @author Kevin Gómez <kgomval118@g.educaand.es>
