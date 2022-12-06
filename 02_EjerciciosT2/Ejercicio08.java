@@ -1,7 +1,7 @@
 /*
  */
 package ejercicio08;
-import bpc.daw.objetos.*;
+import bpc.daw.objetos.DepositoAgua;
 /**
  *
  * @author Kevin Gómez <kgomval118@g.educaand.es>
