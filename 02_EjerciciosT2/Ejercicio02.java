@@ -18,7 +18,7 @@ public class Ejercicio02 {
         System.out.println("a) Dos muñecos de Mario, uno a 100 píxeles de distancia de la esquina superior izquierda\n" +
 "de la pantalla y otro en las coordenadas (640,320)"+"\n");
         Mario m1,m2 = null;        
-        m1 = new Mario(100,100);
+        m1 = new Mario(100.0);
         m2 = new Mario(640,320);
         
         System.out.println("b) Una Seta en la esquina superior izquierda de la pantalla"+"\n");       
