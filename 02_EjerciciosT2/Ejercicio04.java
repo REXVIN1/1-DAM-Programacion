@@ -1,7 +1,8 @@
 /*
  */
 package ejercicio04;
-import bpc.daw.mario.*;
+import bpc.daw.mario.Mario;
+import bpc.daw.mario.Luigi;
 /**
  *
  * @author Kevin Gómez <kgomval118@g.educaand.es>
