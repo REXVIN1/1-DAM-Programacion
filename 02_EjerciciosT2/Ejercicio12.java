@@ -1,7 +1,7 @@
 /*
  */
 package ejercicio12;
-import bpc.daw.objetos.*;
+import bpc.daw.objetos.MarcadorBaloncesto;
 /**
  *
  * @author Kevin Gómez Valderas<kgomval118@g.educaand.es>
