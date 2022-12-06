@@ -26,11 +26,11 @@ public class Ejercicio27 {
         int timeout = new Scanner(System.in).nextInt();
         
         try {
-            InetAddress ia = InetAddress.getByName(ip);
-            Thread.sleep(timeout);
+            InetAddress ia = InetAddress.getByName(ip);    
             try{
                 boolean ping = ia.isReachable(timeout);
-                System.out.println("Haciendo ping a "+ia.getHostAddress()+"..."+ping);
+                Thread.sleep(timeout);
+                System.out.println("\nHaciendo ping a "+ia.getHostAddress()+" ... "+ping);
             }catch(IOException e2){
                 System.out.println("\nError: "+e2.getMessage());
             }
