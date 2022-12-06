@@ -1,7 +1,7 @@
 /*
  */
 package ejercicio11;
-import bpc.daw.objetos.*;
+import bpc.daw.objetos.Caja;
 /**
  *
  * @author Kevin Gómez <kgomval118@g.educaand.es>
