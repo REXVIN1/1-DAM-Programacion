@@ -1,7 +1,5 @@
-/*
- */
-package prueba;
 
+package prueba;
 import java.util.Scanner;
 
 /**
@@ -17,28 +15,21 @@ public class Ejercicio16 {
         System.out.println("Ejercicio 16 : Haz un programa que pregunte al usuario por teclado dos frases. El programa\n" +
 "deberá mostrar por pantalla si la segunda frase está incluida dentro de la primera frase."+"\n");
         
-        System.out.println("Introduzca el texto 1:");
+        System.out.println("Escriba una frase:");
         String frase1 = new Scanner(System.in).nextLine();
+        frase1 = frase1.toLowerCase();
         
-        System.out.println("Introduzca el texto 1:");
-        String frase2 = new Scanner(System.in).nextLine();               
+        System.out.println("Escriba otra frase:");
+        String frase2 = new Scanner(System.in).nextLine();
+        frase2 = frase2.toLowerCase();
         
-        int comprueba1 = frase1.indexOf(frase2, 0);
-        int comprueba2 = frase1.indexOf(frase2);
-        int comprueba3 = frase1.lastIndexOf(frase2);
-        boolean resultado = true;     
+        boolean incluida = frase1.contains(frase2);
         
-        System.out.println("comprueba1:"+comprueba1);
-        
-        if(comprueba1>=0&&comprueba2>=0&&comprueba3>=0){
-            System.out.println("\n"+"Si coincide");
-            resultado = true;
+        if(incluida==true){
+            System.out.println("\nLa segunda frase esta incluida en la primera frase");
         }else{
-            System.out.println("\n"+"No coincide");
-            resultado = false;
-        }  
-        
-        System.out.println("\n"+"¿El texto 2 está incluido en el texto 1? "+resultado);
+            System.out.println("\nLa segunda frase no esta incluida en la primera frase");
+        }
     }
     
 }
