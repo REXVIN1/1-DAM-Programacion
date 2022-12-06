@@ -1,8 +1,9 @@
 /*
  */
 package ejercicio24;
-import java.io.*;
-import java.util.*;
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.util.Scanner;
 /**
  *
  * @author Kevin Gómez <kgomval118@g.educaand.es>
@@ -20,16 +21,15 @@ public class Ejercicio24 {
         
         System.out.println("Escriba 2 frases: ");
         String frase1 = new Scanner(System.in).nextLine();
-        String frase2 = new Scanner(System.in).nextLine();            
-        
-            try{
-                PrintWriter writer = new PrintWriter("C:\\Users\\usuario-mañana\\Desktop\\nuevo\\frases.txt");
-                writer.println(frase1);
-                writer.println(frase2); 
-                writer.close();
-            }catch(Exception existe_archivo){
-                System.out.println("\nError: "+existe_archivo.getMessage());                  
-            }                        
+        String frase2 = new Scanner(System.in).nextLine();    
+        try{
+            PrintWriter pw = new PrintWriter("C:/Users/kevin/Desktop/frases.txt");
+            pw.println(frase1);
+            pw.println(frase2);
+            pw.close();
+        }catch(IOException e){
+            System.out.println("\nError: "+e.getMessage());
+        }                      
     }
     
 }
