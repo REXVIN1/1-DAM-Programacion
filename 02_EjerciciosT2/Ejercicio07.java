@@ -1,7 +1,7 @@
 /*
  */
 package ejercicio07;
-import bpc.daw.objetos.*;
+import bpc.daw.objetos.DepositoAgua;
 
 /**
  *
