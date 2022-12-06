@@ -1,7 +1,7 @@
 /*
  */
 package ejercicio22;
-import bpc.daw.objetos.*;
+import bpc.daw.objetos.TarjetaCredito;
 import java.util.Scanner;
 /**
  *
