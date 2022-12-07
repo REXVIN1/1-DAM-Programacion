@@ -1,6 +1,5 @@
 
 package ejercicio39;
-import java.lang.*;
 
 /* @author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
