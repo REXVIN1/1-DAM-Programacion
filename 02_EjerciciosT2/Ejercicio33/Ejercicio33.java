@@ -2,8 +2,10 @@
 
 
 package ejercicio33;
-import  bpc.daw.reproductor.*;
-import java.io.*;
+import bpc.daw.reproductor.ArchivoMP3;
+import bpc.daw.reproductor.Reproductor;
+import bpc.daw.reproductor.PlayList;
+import java.io.IOException;
 
 /* @author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
@@ -22,22 +24,23 @@ public class Ejercicio33 {
         ArchivoMP3 c3 = new ArchivoMP3("C:/Users/kevin/Desktop/Ejercicio33/chopin.mp3");
         
         ArchivoMP3[] lista = {c1, c2, c3};
-        PlayList playlist = new PlayList();
-        playlist.añadirVarias(lista);
-        playlist.setTitulo("Lista de Ejemplo");
+        ArchivoMP3 c = new ArchivoMP3("C:/Users/kevin/Desktop/chopin.mp3");
         
-        try {
-            playlist.guardar("C:/Users/kevin/Desktop/lista.txt");
-        } catch (IOException ex) {
-            System.out.println("Surgió un problema");
+        PlayList p = new PlayList();
+        p.añadirVarias(lista);
+        p.setTitulo("Lista de Ejemplo");
+        
+        try{
+            p.guardar("C:/Users/kevin/Desktop/lista.txt");
+        }catch(IOException e){
+            System.out.println("Error: "+e.getMessage());
         }
         
-        boolean a = true,b = true;
-        Reproductor r1 = new Reproductor(playlist , a, b);
-        try{                            
-            r1.play();
-        }catch (Error ex) {
-            System.out.println("Surgió un problema");
+        Reproductor r = new Reproductor(p,true,true);
+        try{
+            r.play();
+        }catch(Exception e){
+            System.out.println("Error: "+e.getMessage());
         }
     }
 
