@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio41;
-import java.lang.*;
 
 /**
  *
@@ -18,13 +17,10 @@ public class Ejercicio41 {
         System.out.println("Ejercicio 41 : Haz un programa que calcule el valor de (0.38*4.93)-0.36 y lo muestre por pantalla.\n" +
 "Redondea el resultado al entero más cercano y muéstralo también por pantalla.\n");
         
-        double a=0.38,b=4.93,c=-0.36;
-        
-        double r = Math.pow((a*b), c);
-        
-        double rr = Math.round(r);
-        
-        System.out.println("El resultado edondeado es: "+rr);
+        double a = 0.38, b = 4.93, c = -0.36;
+        double op = Math.pow((a*b), c);
+        System.out.println("Resultado: "+op);        
+        System.out.println("Resultado redondeado: "+Math.round(op));
     }
     
 }
