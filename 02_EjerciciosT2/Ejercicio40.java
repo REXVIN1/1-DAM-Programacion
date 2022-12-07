@@ -13,11 +13,9 @@ public class Ejercicio40 {
 "programa que muestre por pantalla el número de procesadores de tu ordenador y la cantidad\n" +
 "de memoria total asociada al proceso de Java por el sistema operativo.\n");
         
-        System.out.println("Número de procesadores: "+Runtime.getRuntime().availableProcessors());
-        
-        double bytes = Runtime.getRuntime().totalMemory()/8;
-        
-        System.out.println("Cantidad de memoria: "+bytes+" Bytes");
+        Runtime r = Runtime.getRuntime();
+        System.out.println("Número de procesadores: "+r.availableProcessors());
+        System.out.println("memoria asociada a Java (en bits): "+r.totalMemory());
     }
 
 }
