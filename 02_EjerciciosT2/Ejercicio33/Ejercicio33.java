@@ -29,7 +29,7 @@ public class Ejercicio33 {
                 Reproductor r = new Reproductor(a,true,true);
                 r.play();
             }
-            System.out.println("La PlayList a finalizado");
+            System.out.println("La PlayList ha finalizado");
                    
         }catch(FileNotFoundException e){
             System.out.println("Error: "+e.getMessage());
