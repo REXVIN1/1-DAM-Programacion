@@ -1,6 +1,5 @@
 
 package ejercicio36;
-import java.lang.*;
 
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
@@ -12,23 +11,13 @@ public class Ejercicio36 {
         System.out.println("Ejercicio 36 : En la “Librería Estándar de Java” está la clase Math, que sirve para realizar\n" +
 "cálculos matemáticos. Consulta su documentación y calcula:\n");
         
-        double r1;
+        System.out.println("a. La raíz cuadrada de 150:\n"+Math.sqrt(150));
         
-        System.out.println("a. La raíz cuadrada de 150");
-        r1 = Math.pow(150,2);
-        System.out.println("Resultado: "+r1);
+        System.out.println("\nb. 2 elevado a 9, y se divide entre el logaritmo neperiano de 6:\n"+Math.pow(9, 2)/Math.log(6));
         
-        System.out.println("\nb. 2 elevado a 9, y se divide entre el logaritmo neperiano de 6");
-        r1 = (Math.pow(9, 2))/Math.log(6);
-        System.out.println("Resultado: "+r1);
+        System.out.println("\nc. Coseno de 0.16 radianes:\n"+Math.cos(Math.toDegrees(0.16)));
         
-        System.out.println("\nc. Coseno de 0.16 radianes.");
-        r1 = Math.cos(Math.toDegrees(0.16));
-        System.out.println("Respuesta: "+r1);
-        
-        System.out.println("\nd. Seno de 45 grados (utiliza la clase Math para pasar de grados a radianes)");
-        r1 = (Math.sin(Math.toRadians(45)));
-        System.out.println("Respuesta: "+r1);
+        System.out.println("\nd. Seno de 45 grados (utiliza la clase Math para pasar de grados a radianes):\n"+Math.toRadians(Math.sin(45)));
     }
 
 }
