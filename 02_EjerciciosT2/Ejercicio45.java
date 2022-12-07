@@ -3,8 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio45;
-import java.time.*;
-import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
+import java.time.DayOfWeek;
+import java.time.Month;
 
 /**
  *
@@ -20,9 +21,13 @@ public class Ejercicio45 {
 "DayOfWeek. Haz un programa que muestre por pantalla el nombre del día de la semana que\n" +
 "será el 28 de febrero de 2100.\n");
         
+        //Opción 1
         LocalDate hoy = LocalDate.of(2100, Month.FEBRUARY, 28);
+        System.out.println(hoy.getDayOfWeek());
         
-        System.out.println("El dia de la semana es: "+hoy.getDayOfWeek());
+        //Opción 2
+        DayOfWeek dia = DayOfWeek.from(hoy);
+        System.out.println(dia);  
     }
     
 }
