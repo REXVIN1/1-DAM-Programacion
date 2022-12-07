@@ -3,8 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio46;
-import java.lang.*;
-import java.time.*;
+import java.time.Instant;
+import java.time.Duration;
 
 /**
  *
@@ -31,8 +31,8 @@ public class Ejercicio46 {
             Instant i2 = Instant.now();
             
             System.out.println("La duración entre i1 e i2 es: "+Duration.between(i1, i2));
-        }catch(Exception ex){
-            System.out.println("Error: "+ex.getMessage());
+        }catch(InterruptedException e){
+            System.out.println("Error: "+e.getMessage());
         }
     }
     
