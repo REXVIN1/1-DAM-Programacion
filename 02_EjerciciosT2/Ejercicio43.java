@@ -3,8 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio43;
-import java.text.*;
-import java.util.Locale;
+import java.text.NumberFormat;
 
 /**
  *
@@ -21,13 +20,11 @@ public class Ejercicio43 {
 "fórmula: π = 4 ∗ arc tg(1) y muestre el valor usando 4 cifras decimales.\n");
         
         double pi = 4*Math.atan(1);
-        String r2;
         
         NumberFormat nf = NumberFormat.getInstance();
         nf.setMaximumFractionDigits(4);
-        r2 = nf.format(pi); 
         
-        System.out.println("El resultado es: "+r2);
+        System.out.println("PI: "+nf.format(pi));
     }
     
 }
