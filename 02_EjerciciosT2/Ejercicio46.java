@@ -26,8 +26,7 @@ public class Ejercicio46 {
         try{
             Instant i1 = Instant.now();
             double n1 = 0 + (10-0)*Math.random();
-            int n2 = (int) n1;
-            Thread.sleep(n2);
+            Thread.sleep(n1);
             Instant i2 = Instant.now();
             
             System.out.println("La duración entre i1 e i2 es: "+Duration.between(i1, i2));
