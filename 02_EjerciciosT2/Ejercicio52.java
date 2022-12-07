@@ -1,6 +1,7 @@
 
 package ejercicio52;
 import java.util.HashMap;
+import java.util.Scanner;
 
 /*@author usuario-mañana*/
 
