@@ -1,6 +1,6 @@
 
 package ejercicio51;
-import java.util.*;
+import java.util.HashSet;
 
 /*@author usuario-mañana*/
 
