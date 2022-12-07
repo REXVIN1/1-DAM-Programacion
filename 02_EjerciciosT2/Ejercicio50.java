@@ -1,6 +1,6 @@
 
 package ejercicio50;
-import java.util.*;
+import java.util.ArrayList;
 
 /*@author usuario-mañana*/
 
