@@ -3,9 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio47;
-import java.awt.*;
-import java.util.*;
-import java.io.*;
+import java.awt.Desktop;
+import java.util.Scanner;
+import java.io.File;
 
 /**
  *
@@ -28,8 +28,8 @@ public class Ejercicio47 {
         try{
             Desktop d = Desktop.getDesktop();
             d.open(f);
-        }catch(Exception ex){
-            System.out.println("Error: "+ex.getMessage());
+        }catch(Exception e){
+            System.out.println("Error: "+e.getMessage());
         }
         
         
