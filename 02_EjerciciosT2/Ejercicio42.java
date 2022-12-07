@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package ejercicio42;
+import java.util.Random;
 
 /**
  *
@@ -20,9 +21,14 @@ public class Ejercicio42 {
         
         int a=29,b=65;
         
-        double n = a + (b-a)*Math.random();
+        //Random con Math
+        double n1 = a + (b-a)*Math.random();
+        System.out.println("Número aleatorio 1: "+n1);
         
-        System.out.println("Número aleatorio: "+n);
+        //Clase Random
+        Random r = new Random();
+        double n2 = r.nextInt(a, b);
+        System.out.println("Número aleatorio 2: "+n2);
     }
     
 }
