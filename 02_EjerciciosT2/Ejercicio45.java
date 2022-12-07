@@ -23,11 +23,11 @@ public class Ejercicio45 {
         
         //Opción 1
         LocalDate hoy = LocalDate.of(2100, Month.FEBRUARY, 28);
-        System.out.println(hoy.getDayOfWeek());
+        System.out.println("Dia de la semana 1: "+hoy.getDayOfWeek());
         
         //Opción 2
         DayOfWeek dia = DayOfWeek.from(hoy);
-        System.out.println(dia);  
+        System.out.println("\nDia de la semana 2: "+dia);  
     }
     
 }
