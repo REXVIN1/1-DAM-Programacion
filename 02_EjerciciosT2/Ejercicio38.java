@@ -1,7 +1,5 @@
 
 package ejercicio38;
-import java.lang.*;
-import java.math.*;
 
 /* @author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
