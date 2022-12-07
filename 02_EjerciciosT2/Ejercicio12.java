@@ -20,8 +20,8 @@ public class Ejercicio12 {
          
         MarcadorBaloncesto marcador = new MarcadorBaloncesto("CB Granada","Estudiantes");
         
-        int puntos[] = {2,3,2,2,3,1,2};
-        char equipos[] = {'V','L','V','L','L','V','L'};
+        int puntos[] = {2,3,2,2,3,1,1,2};
+        char equipos[] = {'V','L','V','L','L','V','V','L'};
         int p = 0,e = 0;
         
         System.out.println("--------EMPIEZA EL PARTIDO---------");
