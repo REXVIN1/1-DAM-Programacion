@@ -18,7 +18,7 @@ public class Ejercicio44 {
         
         System.out.println("Fecha 1:");
         System.out.println(hoy.format(DateTimeFormatter.ofPattern("dd/MM/yyy")));
-        
+          
         System.out.println("\nFecha 2:");
         System.out.println(hoy.format(DateTimeFormatter.ofPattern("dd-MM-yyy")));       
     }
