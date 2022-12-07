@@ -1,6 +1,6 @@
 
 package ejercicio44;
-import java.time.*;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
@@ -17,7 +17,7 @@ public class Ejercicio44 {
         LocalDate hoy = LocalDate.now();
         
         System.out.println("Fecha 1:");
-        System.out.println(hoy.format(DateTimeFormatter.ofPattern("dd/MM/yyy"));
+        System.out.println(hoy.format(DateTimeFormatter.ofPattern("dd/MM/yyy")));
         
         System.out.println("\nFecha 2:");
         System.out.println(hoy.format(DateTimeFormatter.ofPattern("dd-MM-yyy")));       
