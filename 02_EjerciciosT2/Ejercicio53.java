@@ -1,6 +1,7 @@
 
 package ejercicio53;
-import java.util.*;
+import java.util.TreeMap;
+import java.util.Scanner;
 
 /*@author usuario-mañana*/
 
