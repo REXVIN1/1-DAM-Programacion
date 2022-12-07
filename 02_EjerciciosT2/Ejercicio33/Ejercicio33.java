@@ -1,11 +1,11 @@
 
 
 
-package ejercicio33;
 import bpc.daw.reproductor.ArchivoMP3;
 import bpc.daw.reproductor.Reproductor;
-import bpc.daw.reproductor.PlayList;
-import java.io.IOException;
+import java.io.File;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
 
 /* @author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
@@ -19,8 +19,8 @@ public class Ejercicio33 {
                     "añádele tres canciones a ellas. El programa deberá guardar dicha lista en el disco duro (puedes\n" +
                     "inventar el nombre del archivo) y luego reproducir las tres canciones de forma síncrona.\n");
         
-        try{
-            File lista = new File("C:/Users/kevin/Desktop/titulo.txt");
+        File lista = new File("C:/Users/kevin/Desktop/titulo.txt");
+        try{           
             Scanner s = new Scanner(lista);
             s.nextLine();
             boolean b = s.hasNextLine();
