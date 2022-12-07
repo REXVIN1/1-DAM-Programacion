@@ -33,7 +33,7 @@ public class Ejercicio53 {
         System.out.println("\nd) Llama al método toString del map y muestra lo que produce por pantalla");
         System.out.println("Método toString: "+tm.toString());
         
-        System.out.println("\nNo veo ninguna diferencia entre un metodo y otro");
+        System.out.println("\nNo se percibe ninguna diferencia a priori pero, una interfaz  esta basada en la organización en árbol ");
     }
     
 }
