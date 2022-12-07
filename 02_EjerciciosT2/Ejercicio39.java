@@ -13,18 +13,12 @@ public class Ejercicio39 {
 "programa que muestre por pantalla información sobre tu ordenador, de la forma que indica la\n" +
 "siguiente imagen. (Nota: La carpeta de archivos temporales es la variable de entorno TMP).\n");
         
-        String SO = "os.name";
-        String VSO = "os.version";
-        String ASO = "os.arch";
-        String user = "user.name";
-        String cap = "java.io.tmpdir";
-        
-        System.out.println("Información sobre el ordenador:\n");
-        System.out.println("-Sistema operativo: "+System.getProperty(SO));
-        System.out.println("-Versión del sistema operativo: "+System.getProperty(VSO));
-        System.out.println("-Arquitectura del sistema operativo: "+System.getProperty(ASO));
-        System.out.println("-Usuario actual: "+System.getProperty(user));
-        System.out.println("-Carpeta de archivos temporales: "+System.getProperty(cap));
+        System.out.println("Informacion del ordenador:\n");
+        System.out.println("-Sistema operativo: "+System.getProperty("os.name"));
+        System.out.println("-Version del sistema operativo: "+System.getProperty("os.version"));
+        System.out.println("-Arquitectura del sistema operativo: "+System.getProperty("os.arch"));
+        System.out.println("-Usuario actual: "+System.getProperty("user.name"));
+        System.out.println("-Carpeta de archivos temporales: "+System.getProperty("java.io.tmpdir"));
         
     }
 
