@@ -1,11 +1,11 @@
 
 
 
+package ejercicio33;
 import bpc.daw.reproductor.ArchivoMP3;
 import bpc.daw.reproductor.Reproductor;
-import java.io.File;
-import java.util.Scanner;
-import java.io.FileNotFoundException;
+import bpc.daw.reproductor.PlayList;
+import java.io.IOException;
 
 /* @author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
@@ -19,19 +19,25 @@ public class Ejercicio33 {
                     "añádele tres canciones a ellas. El programa deberá guardar dicha lista en el disco duro (puedes\n" +
                     "inventar el nombre del archivo) y luego reproducir las tres canciones de forma síncrona.\n");
         
-        File lista = new File("C:/Users/kevin/Desktop/titulo.txt");
-        try{           
-            Scanner s = new Scanner(lista);
-            s.nextLine();
-            boolean b = s.hasNextLine();
-            while(b==true){
-                ArchivoMP3 a = new ArchivoMP3(s.nextLine());
-                Reproductor r = new Reproductor(a,true,true);
-                r.play();
-            }
-            System.out.println("La PlayList ha finalizado");
-                   
-        }catch(FileNotFoundException e){
+        ArchivoMP3 c1 = new ArchivoMP3("C:/Users/kevin/Desktop/beethoven.mp3");
+        ArchivoMP3 c2 = new ArchivoMP3("C:/Users/kevin/Desktop/mozart.mp3");
+        ArchivoMP3 c3 = new ArchivoMP3("C:/Users/usuario-mañana/Desktop/chopin.mp3");
+        
+        ArchivoMP3[] lista = {c1, c2, c3};
+        PlayList playlist = new PlayList();
+        playlist.añadirVarias(lista);
+        playlist.setTitulo("Lista de Ejemplo");
+        
+        try {
+            playlist.guardar("C:/Users/kevin/Desktop/lista.txt");
+        } catch (IOException e) {
+            System.out.println("Error: "+e.getMessage());
+        }
+        
+        Reproductor r1 = new Reproductor(playlist , true, true);
+        try{                            
+            r1.play();
+        }catch (Exception e) {
             System.out.println("Error: "+e.getMessage());
         }
     }
