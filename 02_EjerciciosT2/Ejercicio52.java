@@ -1,6 +1,6 @@
 
 package ejercicio52;
-import java.util.*;
+import java.util.HashMap;
 
 /*@author usuario-mañana*/
 
@@ -36,15 +36,16 @@ public class Ejercicio52 {
 "existe esa matrícula”");
         
         System.out.println("\nIntroduzca el código:");
-        String n = new Scanner(System.in).nextLine();
+        String n = new Scanner(System.in).nextLine();     
         
-               
-        
-        if(n.equals("12535ABC")||n.equals("98525KWX")||n.equals("17632MSE")||n.equals("85321ABC")){
-            System.out.println(hm.get(n)); 
-        }else{
-            System.out.println("Por favor introduzca una matrícula existente");
+        boolean b = n.equals("12535ABC")||n.equals("98525KWX")||n.equals("17632MSE")||n.equals("85321ABC");
+        while(b==false){
+            System.out.println("\nPor favor introduzca una matrícula existente");
+            System.out.println("\nIntroduzca el código:");
+            n = new Scanner(System.in).nextLine();
+            b = n.equals("12535ABC")||n.equals("98525KWX")||n.equals("17632MSE")||n.equals("85321ABC");
         }
+        System.out.println("\n"+hm.get(n)); 
         
     }
     
