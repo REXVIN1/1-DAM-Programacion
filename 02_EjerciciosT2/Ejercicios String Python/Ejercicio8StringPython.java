@@ -1,8 +1,7 @@
 /*
  */
 package ejercicio8.string.python;
-import java.lang.*;
-import java.util.*;
+import java.util.Scanner;
 /**
  *
  * @author Kevin Gómez Valderas<kgomval118@g.educaand.es>
