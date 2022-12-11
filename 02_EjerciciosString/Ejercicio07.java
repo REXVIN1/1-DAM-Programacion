@@ -14,56 +14,22 @@ public class Ejercicio07 {
      */
     public static void main(String[] args) {
         System.out.println("Partiendo de una cadena, intercambiar cada par de caracteres adyacentes. Un carácter sólo puede intercambiarse como máximo una vez.\n");
-        System.out.println("Introduzca una cadena (máximo 6 caracteres):");
-        String cadena = new Scanner(System.in).nextLine();        
-        
-                String p1 = cadena;
-                int l2 = p1.length();
-                if(l2==1){
-                    System.out.println("Escribe mas de un caracter");
-                }else{
-                    if(l2==2){
-                        char letra0 = p1.charAt(0);                        
-                        char letra1 = p1.charAt(1);
-                        System.out.println(letra1+""+letra0);
-                    }else{
-                        if(l2==3){
-                            char letra0 = p1.charAt(0);                        
-                            char letra1 = p1.charAt(1);
-                            char letra2 = p1.charAt(2);
-                            System.out.println(letra1+""+letra0+""+letra2);
-                        }else{
-                            if(l2==4){
-                                char letra0 = p1.charAt(0);                        
-                                char letra1 = p1.charAt(1);
-                                char letra2 = p1.charAt(2);
-                                char letra3 = p1.charAt(3);
-                                System.out.println(letra1+""+letra0+""+letra3+""+letra2);
-                            }else{
-                                if(l2==5){
-                                    char letra0 = p1.charAt(0);                        
-                                    char letra1 = p1.charAt(1);
-                                    char letra2 = p1.charAt(2);
-                                    char letra3 = p1.charAt(3);
-                                    char letra4 = p1.charAt(4);
-                                    System.out.println(letra1+""+letra0+""+letra3+""+letra2+""+letra4);
-                                }else{
-                                    if(l2==6){
-                                        char letra0 = p1.charAt(0);                        
-                                        char letra1 = p1.charAt(1);
-                                        char letra2 = p1.charAt(2);
-                                        char letra3 = p1.charAt(3);
-                                        char letra4 = p1.charAt(4);
-                                        char letra5 = p1.charAt(5);
-                                        System.out.println(letra1+""+letra0+""+letra3+""+letra2+""+letra4+""+letra5);
-                                    }else{
-                                        System.out.println("Te pasaste de caracteres");
-                                    }
-                                }                                
-                            }
-                        }
-                    }                                                                
-                }
+        System.out.println("Introduzca una cadena:");
+        String cadena = new Scanner(System.in).nextLine();
+        int i = 0, f = 2; 
+        String extraccion;
+        StringBuilder extraccion2;
+        StringBuilder cadena2;
+        while(f<cadena.length()){ 
+            extraccion = cadena.substring(i, f);
+            extraccion2 = new StringBuilder(extraccion);
+            extraccion = extraccion2.reverse().toString();
+            cadena2 = new StringBuilder(cadena);
+            cadena = cadena2.replace(i, f, extraccion).toString();
+            i+=2;
+            f+=2;
+        }
+        System.out.println("\nCadena: "+cadena);
     }
     
 }
