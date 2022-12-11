@@ -1,6 +1,7 @@
 /*
  */
 package ejercicio1.strings.python;
+import java.util.Scanner;
 /**
  *
  * @author Kevin Gómez Valderas<kgomval118@g.educaand.es>
