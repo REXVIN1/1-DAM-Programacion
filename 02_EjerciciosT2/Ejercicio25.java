@@ -19,12 +19,16 @@ public class Ejercicio25 {
 "muestre por pantalla las dos frases que hay guardadas en él.\n");
         
         File f = new File("C:/Users/kevin/Desktop/frases.txt");
+        int i = 1;
         try{
-           Scanner escaner = new Scanner(f);
-           System.out.println("Frase 1: "+escaner.nextLine());
-           System.out.println("Frase 2: "+escaner.nextLine()); 
-        }catch(IOException e){
-            System.out.println("\nError: "+e.getMessage());
-        }                  
+            Scanner s = new Scanner(f);
+            while(s.hasNextLine()==true){
+                System.out.println("Frase "+i+": "+s.nextLine());
+                i++;
+            }
+            
+        }catch(FileNotFoundException ex){
+            System.out.println("Error: "+ex.getMessage());
+        }                
     }    
 }
