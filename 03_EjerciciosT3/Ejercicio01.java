@@ -1,7 +1,8 @@
 
 package ejercicio01;
-import java.util.*;
-import bpc.daw.reproductor.*;
+import java.util.Scanner;
+import bpc.daw.reproductor.ArchivoMP3;
+import bpc.daw.reproductor.Reproductor;
 
 /*@author usuario-mañana*/
 public class Ejercicio01_Ampliación{
