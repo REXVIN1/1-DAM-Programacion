@@ -8,18 +8,24 @@ import java.util.Scanner;
 public class Ejercicio34 {
 
     public static void main(String[] args) {
-        int n = 0;
-        boolean b;
+        int n;
+        boolean b1=true, b2;
         
-        System.out.println("Escriba un numero: ");
-        n = new Scanner(System.in).nextInt();        
-        System.out.println("Los divisores de "+n+" son:");
-        
-        for(int i=1;i<=n;i++){
-            b =(n%i)==0;
-            if(b==true){
-                System.out.println(i);
-            }                    
+        while(b1){
+            System.out.println("\nEscriba un numero: ");
+            n = new Scanner(System.in).nextInt();                    
+
+            if(n<0){
+                System.out.println("Introduca un valor mayor de uno");
+            }else{
+                System.out.println("Los divisores de "+n+" son:");
+                for(int i=1;i<=n;i++){
+                    b2 =(n%i)==0;
+                    if(b2==true){
+                        System.out.println(i);
+                    }                    
+                }            
+            }
         }
     }
 }
