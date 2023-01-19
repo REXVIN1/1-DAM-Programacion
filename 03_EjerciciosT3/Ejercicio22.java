@@ -11,7 +11,7 @@ public class Ejercicio22 {
                 total_pepe=0, total_ana=0, total_juan=0, total_guillermo=0,
                 total_roberta=0;
         
-        for(int i=0;i<3;i++){
+        for(int i=0;i<4;i++){
             total_pepe = total_pepe + pepe[i];
             total_ana = total_ana + ana[i];
             total_juan = total_juan + juan[i];
