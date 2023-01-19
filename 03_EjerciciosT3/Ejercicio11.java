@@ -30,7 +30,7 @@ public class Ejercicio11 {
         try {
             f.createNewFile();
         } catch (IOException ex) {
-            Logger.getLogger(Ejercicio11.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error: " + ex.getMessage());
         }
                 
         do{
