@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Ejercicio42 {
 
     public static void main(String[] args) {
-        int f, c,n=0, e=0,x = 0;
+        int f, c, e, x=0;
         String fila = "";
         
         System.out.println("Escriba numero de filas:");
