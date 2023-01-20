@@ -1,6 +1,5 @@
 
 package ejercicio12;
-
 import java.util.Scanner;
 
 /* @author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
@@ -22,7 +21,6 @@ public class Ejercicio12 {
                 }
                 System.out.println("Nota media: "+(total/longitud));
                 b=false;
-
             }else{
                 System.out.println("Introduzca un valor adecuado\n");
             }            
