@@ -8,7 +8,7 @@ import java.util.List;
 public class Ejercicio06 {
 
     public static void main(String[] args) {
-        List<Integer> a = new ArrayList<Integer>();
+        List<Integer> a = new ArrayList<>();
         
         for(int i=1;i<=100;i++){
             if(i%3!=0){
@@ -27,7 +27,7 @@ public class Ejercicio06 {
         a.clear();
         
         for(int x=1;x<=100;x++){
-            if(x%5!=0||x%5!=0){
+            if(x%5!=0&&x%3!=0){
                 a.add(x);
             }            
         }
