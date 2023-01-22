@@ -6,18 +6,16 @@ package ejercicio01;
 public class Ejercicio01 {
 
     public static void main(String[] args) {
-        int n=5, total=0, total2=0;
-        boolean b = (total==10), b2;
+        int total=0, suma=0, n=5;
         
-        for(int i=0;b==false;i++){
-            b =(total==10);
-            b2 = (i%n)==0;
-            if(b2==true){
-                total = total +1;
-                total2 = total2 + i;
+        System.out.println("Multiplos del 5:");
+        for(int i=0;total!=10;i++){
+            if(i%n==0){
+                total = total + 1;
+                suma = suma + i;
                 System.out.println(i);
             }
         }
-        System.out.println("Total: "+total2);
+        System.out.println("\nSuma: "+suma);
     }  
 }
