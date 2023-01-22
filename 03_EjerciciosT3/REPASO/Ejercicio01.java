@@ -6,7 +6,7 @@ package ejercicio01;
 public class Ejercicio01 {
 
     public static void main(String[] args) {
-        int n=5, total=0;
+        int n=5, total=0, total2=0;
         boolean b = (total==10), b2;
         
         for(int i=0;b==false;i++){
@@ -14,8 +14,10 @@ public class Ejercicio01 {
             b2 = (i%n)==0;
             if(b2==true){
                 total = total +1;
+                total2 = total2 + i;
                 System.out.println(i);
             }
         }
+        System.out.println("Total: "+total2);
     }  
 }
