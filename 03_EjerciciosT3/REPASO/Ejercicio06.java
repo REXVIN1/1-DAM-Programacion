@@ -9,7 +9,6 @@ public class Ejercicio06 {
 
     public static void main(String[] args) {
         List<Integer> a = new ArrayList<Integer>();
-        int m3 = 0;
         
         for(int i=1;i<=100;i++){
             if(i%3!=0){
