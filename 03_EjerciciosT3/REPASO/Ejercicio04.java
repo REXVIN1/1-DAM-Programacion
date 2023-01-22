@@ -8,46 +8,36 @@ import java.util.Scanner;
 public class Ejercicio04 {
 
     public static void main(String[] args) {
-        int alumnos, total_trimestre=0, total_trimestres, total2;
-        double nota_actividad, nota, nota2, total=0;
+        int n;
+        double a_nota, a_total=0, t_total=0, t_media, e_nota, e_media, c_nota, n_final;
         
-        System.out.println("¿Cuantos alumnos hay en la clase?");
-        alumnos = new Scanner(System.in).nextInt();
-        
-        for(int x=0;x<alumnos;x++){
-            System.out.println("---------------------------------------");
-            System.out.println("\nALUMNO "+(x+1)+": ");
-            System.out.println("Nota de las 4 actividades:");
-            for(int e=0;e<3;e++){
-                if(e==0){
-                    System.out.println("Primer trimestre:");
-                }if(e==1){
-                    System.out.println("Segundo trimestre:");
-                }if(e==2){
-                    System.out.println("Tercer trimestre");
-                }
+        System.out.println("\nCuantos alumnos hay en el aula: ");
+        n = new Scanner(System.in).nextInt();
+        for(int y=1;y<=n;y++){
+            System.out.println("-----------------------\nAlumno "+y+":");
+            for(int i=1;i<4;i++){
+                System.out.println("\nTrimestre "+(i)+":");
 
-                for(int i=0;i<4;i++){
-                    nota_actividad = new Scanner(System.in).nextDouble();
-                    total = total +nota_actividad;
+                for(int x=1;x<5;x++){
+                    System.out.println("Actividad "+x+":");
+                    a_nota = new Scanner(System.in).nextDouble();
+                    a_total = a_total + a_nota;                
                 }
-                total2 = (int)total;
-                total_trimestre = total_trimestre+(total2/4);
-                
-                total=0;
+                t_total = a_total/4;
             }
-            total_trimestres = total_trimestre/3;
-            total_trimestres = (total_trimestres*3)/3;
-            System.out.println(total_trimestres);
+            t_media = ((t_total/3)*3)/3;
+
+            System.out.println("\nNota del examen: ");
+            e_nota = new Scanner(System.in).nextDouble();
+            e_media = (e_nota*6)/6;
+
+            System.out.println("\nNota de clase: ");
+            c_nota = new Scanner(System.in).nextDouble();
             
-            System.out.println("\nIntroduzca la nota del examen:");
-            nota = new Scanner(System.in).nextDouble();                                    
-            nota = (nota*3)/3;
+            n_final = (t_media+e_media+c_nota)/3;
+            System.out.println("\nMedia final: "+n_final);
             
-            System.out.println("\nIntroduzca la nota de actitud:");
-            nota2 = new Scanner(System.in).nextDouble();
-            
-            System.out.println("Media: "+((total_trimestres+nota+nota2)/3));
+            a_total = 0;
         }
     }    
 }
