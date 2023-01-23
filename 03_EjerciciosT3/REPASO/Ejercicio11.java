@@ -19,7 +19,7 @@ public class Ejercicio11 {
             "&","¬","/","(",")","=","?","¿","¡","'","`","^","[","+","*","]","´"
                 ,"¨","{","}",",",";",":",".","-","_"};
         
-        boolean may=true, numero=true, sim=true;                
+        boolean may=true, numero=true, sim=true;                        
         
         do{
             System.out.println("\nEliga la longitud (8-16):");
@@ -32,7 +32,7 @@ public class Ejercicio11 {
         
         do{
             System.out.println("\nEliga como quiere la letra (mayuscula/minuscula):");
-            tipo_l = new Scanner(System.in).nextLine();
+            tipo_l = new Scanner(System.in).nextLine().replaceAll("\\s+", "");
             if(tipo_l.equalsIgnoreCase("minuscula")){
                 may=false;
                 System.out.println("Ha escogido minuscula");
@@ -46,7 +46,7 @@ public class Ejercicio11 {
         
         do{
             System.out.println("\nDesea que tenga numeros (si/no):");
-            n = new Scanner(System.in).nextLine();
+            n = new Scanner(System.in).nextLine().replaceAll("\\s+", "");
             if(n.equalsIgnoreCase("no")){
                 numero=false;
                 System.out.println("Ha escogido sin numeros");
@@ -60,7 +60,7 @@ public class Ejercicio11 {
         
         do{
             System.out.println("\nCon o sin simbolos: (con/sin):");
-            simbolo = new Scanner(System.in).nextLine();
+            simbolo = new Scanner(System.in).nextLine().replaceAll("\\s+", "");
             if(simbolo.equalsIgnoreCase("sin")){
                 sim=false;
                 System.out.println("Ha escogido sin simbolos");
@@ -74,7 +74,8 @@ public class Ejercicio11 {
                
         System.out.println("\nCuantas contraseñas desea generar:");
         n_contraseña = new Scanner(System.in).nextInt();        
-                
+        
+        
         for(int i=0;i<n_contraseña;i++){
             while(contraseña.length()<longitud){
                 if(may==true){
