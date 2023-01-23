@@ -40,7 +40,7 @@ public class Ejercicio11 {
                 System.out.println("Ha escogido minuscula");
             }if(tipo_l.equalsIgnoreCase("mayuscula")){
                 may=true;
-                System.out.println("Ha escogido minuscula");
+                System.out.println("Ha escogido mayuscula");
             }if(!tipo_l.equalsIgnoreCase("mayuscula")&&!tipo_l.equalsIgnoreCase("minuscula")){
                 System.out.println("Introduzca un valor adecuado (mayuscula/minuscula)");
             }                               
