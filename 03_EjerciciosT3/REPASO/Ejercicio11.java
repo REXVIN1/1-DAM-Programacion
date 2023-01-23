@@ -19,9 +19,7 @@ public class Ejercicio11 {
             "&","¬","/","(",")","=","?","¿","¡","'","`","^","[","+","*","]","´"
                 ,"¨","{","}",",",";",":",".","-","_"};
         
-        boolean may=true, numero=true, sim=true;        
-        
-        
+        boolean may=true, numero=true, sim=true;                
         
         do{
             System.out.println("\nEliga la longitud (8-16):");
@@ -76,8 +74,7 @@ public class Ejercicio11 {
                
         System.out.println("\nCuantas contraseñas desea generar:");
         n_contraseña = new Scanner(System.in).nextInt();        
-        
-        
+                
         for(int i=0;i<n_contraseña;i++){
             while(contraseña.length()<longitud){
                 if(may==true){
