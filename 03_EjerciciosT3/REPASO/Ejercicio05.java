@@ -11,7 +11,7 @@ public class Ejercicio05 {
         String numeros =  "";
         
         for(int i=0;i<50;i++){
-            numeros += +x+","+y+",";            
+            numeros += x+","+y+",";            
             x = x+y;
             y = x+y;
         }
