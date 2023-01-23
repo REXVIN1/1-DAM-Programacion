@@ -10,7 +10,7 @@ public class Ejercicio10 {
 
     public static void main(String[] args) {
         
-        List<String> normal = new ArrayList<String>();
+        List<String> normal = new ArrayList<>();
         List<String> leet = new ArrayList<>();
         String texto, letra;
         int x=0, y=1;
