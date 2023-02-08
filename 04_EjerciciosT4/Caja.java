@@ -7,6 +7,7 @@ public class Caja {
     private boolean abierto=false;
     private String mensaje;
     
+    
     public Caja(String m){
         mensaje = m;
     };
