@@ -27,7 +27,7 @@ public class MarcadorBaloncesto {
         puntosLocal = 0;
         puntosVisitante = 0;
     }
-    public MarcadorBaloncesto(String nL, int pL, String nV, int pV, LocalDate f){
+    private MarcadorBaloncesto(String nL, int pL, String nV, int pV, LocalDate f){
         nombreLocal = nL;
         nombreVisitante = nV;
         puntosLocal = pL;
