@@ -23,12 +23,13 @@ public class DNI {
         letra = c;
     };
     public DNI(String s){
-        letra2 = s.charAt(8);
-        digitos = s.substring(0, 8);        
-        letra = letra2;
-        numero = Integer.parseInt(digitos);               
+        if(s.length()==9){
+            letra2 = s.charAt(8);
+            digitos = s.substring(0, 8);        
+            letra = letra2;
+            numero = Integer.parseInt(digitos);                           
+        }
     };
-    
     
     //GETTERS
     public int getNumero(){
