@@ -6,40 +6,41 @@ import java.util.ArrayList;
 
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
-public class Oficina {
-    private String nombre;
-    private ArrayList<Persona> trabajadores;
+public class Oficina {        
+    //VALORES        
+    private final String nombre;
+    private final ArrayList<Persona> trabajadores;       
     
-    ArrayList<String> l_mileurista = new ArrayList<>();
-    Persona persona;         
     
+    //CLASES
     public Oficina(String n){
+        this.trabajadores = new ArrayList<>();
         nombre = n;
-        trabajadores = new ArrayList<>();      
+        trabajadores.clear();      
     };
     public Oficina(String n, int t){
+        this.trabajadores = new ArrayList<>();
         nombre = n;
         if(t==0||t>3){
-            trabajadores = new ArrayList<>();
+            trabajadores.clear();
         }if(t==1){
-            trabajadores = new ArrayList<>(); 
             trabajadores.add(new Persona("Antonio Pérez Pérez",1111111,'H',900,LocalDate.of(2000,2,28)));
         }if(t==2){
-            trabajadores = new ArrayList<>(); 
             trabajadores.add(new Persona("Antonio Pérez Pérez",1111111,'H',900,LocalDate.of(2000,2,28)));            
             trabajadores.add(new Persona("Luis López López",2222222,'J',1000,LocalDate.of(1995,9,10)));
         }if(t==3){
-            trabajadores = new ArrayList<>(); 
             trabajadores.add(new Persona("Antonio Pérez Pérez",1111111,'H',900,LocalDate.of(2000,2,28)));            
             trabajadores.add(new Persona("Luis López López",2222222,'J',1000,LocalDate.of(1995,9,10)));
             trabajadores.add(new Persona("Ana Díaz Díaz",3333333,'P',1200,LocalDate.of(1985,5,21)));
         }
     };
     public Oficina(){
+        this.trabajadores = new ArrayList<>();
         nombre = "Industrias DAW";
     };
     
     
+    //GETTERS
     public int getTotalEmpleados(){
         return trabajadores.size();        
     }
@@ -53,6 +54,7 @@ public class Oficina {
         return mileuristas;        
     }
     public ArrayList getMileuristas(){
+        ArrayList<String> l_mileurista = new ArrayList<>();
         for(Persona p : trabajadores){
             if(p.getSueldo()<=1200){
                l_mileurista.add(p.getNombre());
@@ -65,17 +67,13 @@ public class Oficina {
     }    
     
     
-    
+    //SETTERS
     public void añadirEmpleado(Persona p){
-        persona = p;
-        trabajadores.add(persona);
+        trabajadores.add(p);
     };
-    public void añadirEmpleado(String n,DNI dni,double sueldo,LocalDate fechaNac){
-        persona.setNombre(n);
-        persona.setDNI(dni);
-        persona.setSueldo(sueldo);
-        persona.setFechaNacimiento(fechaNac);
-        trabajadores.add(persona);
+    public void añadirEmpleado(String n,String dni,double sueldo,LocalDate fechaNac){
+        DNI dni2 = new DNI(dni);
+        trabajadores.add(new Persona(nombre,dni2,sueldo,fechaNac));
     };
     public void pagarEmpleados(){
         for(Persona p : trabajadores){
