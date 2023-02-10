@@ -9,14 +9,13 @@ public class DNI {
     private int numero;
     private char letra;
     char letra2;
-    String digitos;
     HashMap hm = new HashMap();
     
-    private DNI(){}
+    public DNI(){}
     public DNI(int n){
         numero = n;
-        DNI dni2 = new DNI();
-        letra = dni2.calcularLetra(n);
+        DNI dni = new DNI();
+        letra = dni.calcularLetra(n);
     }
     public DNI(int n, char c){
         numero = n;
@@ -25,7 +24,7 @@ public class DNI {
     public DNI(String s){
         if(s.length()==9){
             letra2 = s.charAt(8);
-            digitos = s.substring(0, 8);        
+            String digitos = s.substring(0, 8);       
             letra = letra2;
             numero = Integer.parseInt(digitos);                           
         }
