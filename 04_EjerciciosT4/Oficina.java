@@ -13,12 +13,12 @@ public class Oficina {
     
     
     //CONSTRUCTORES
-    public Oficina(String n){
+    private Oficina(String n){
         this.trabajadores = new ArrayList<>();
         nombre = n;
         trabajadores.clear();      
     };
-    public Oficina(String n, int t) throws IllegalArgumentException{
+    private Oficina(String n, int t) throws IllegalArgumentException{
         this.trabajadores = new ArrayList<>();
         nombre = n;
         if(t==0){
@@ -36,7 +36,7 @@ public class Oficina {
             throw new IllegalArgumentException();
         }
     };
-    public Oficina(){
+    private Oficina(){
         this.trabajadores = new ArrayList<>();
         nombre = "Industrias DAW";
     };
