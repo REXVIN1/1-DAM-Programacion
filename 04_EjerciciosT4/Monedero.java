@@ -27,7 +27,7 @@ public class Monedero implements Adinerado{
 
     @Override
     public boolean retirarDinero(int cantidad) {
-        if(cantidad>=1000){
+        if(cantidad<=dinero){
             this.dinero-=cantidad;            
         }
         return cantidad>=this.dinero;
