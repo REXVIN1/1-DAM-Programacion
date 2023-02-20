@@ -1,4 +1,3 @@
-
 package daw.persona;
 
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
@@ -27,7 +26,7 @@ public class Banco implements Adinerado{
 
     @Override
     public boolean retirarDinero(int cantidad) {
-        if(cantidad<=dinero){
+        if(cantidad<=this.dinero){
             this.dinero-=cantidad;            
         }
         return cantidad>=this.dinero;
