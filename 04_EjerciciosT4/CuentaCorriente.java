@@ -42,4 +42,12 @@ public class CuentaCorriente {
             numero = c;
         }        
     }
+    public void retirarDinero(int cantidad) throws Exception{
+        if(cantidad<=saldo){
+            saldo -= cantidad;
+        }else{
+            Exception e = new Exception("Dinero insuficiente");
+            throw e;
+        }
+    }
 }
