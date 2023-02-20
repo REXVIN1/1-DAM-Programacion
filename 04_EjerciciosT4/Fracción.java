@@ -1,4 +1,3 @@
-
 package daw.persona;
 
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
@@ -22,7 +21,8 @@ public class Fracción {
         return this.denominador;
     }
     public double getValorReal(){
-        return this.numerador/this.denominador;
+        double n = (double) numerador, n2 = (double) denominador;;
+        return n/n2;
     }
     public Fracción getInversa(){
         Fracción f = new Fracción(this.denominador, this.numerador);
@@ -43,8 +43,7 @@ public class Fracción {
         Fracción f = new Fracción(a.getNumerador()*b.getDenominador(), 
                                   a.getDenominador()*b.getNumerador());
         return f;
-    }
-    
+    }    
     
     @Override
     public String toString(){
