@@ -1,4 +1,3 @@
-
 package daw.persona;
 
 import java.time.LocalTime;
@@ -17,18 +16,18 @@ public class Reloj {
 
     //GETTERS
     public boolean esNoche(){
-        return hora.getHour()<=20&&hora.getHour()>=8;
+        return this.hora.getHour()<=20&&this.hora.getHour()>=8;
     }
     @Override
     public String toString(){
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("hh:mm:ss");
-        String s = hora.format(dtf);
+        String s = this.hora.format(dtf);
         return s;
     }
     
     //SETTERS
     public void añadir(int segundos){                
-        this.hora = hora.plusSeconds(segundos);        
+        this.hora = this.hora.plusSeconds(segundos);        
     }
     public void esperar(int segundos) throws InterruptedException{        
         Thread.sleep(segundos*1000);
