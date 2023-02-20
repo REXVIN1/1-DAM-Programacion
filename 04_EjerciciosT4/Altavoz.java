@@ -24,7 +24,7 @@ public class Altavoz {
     
     //GETTERS
     public int getVolumen(){
-        return volumen;
+        return this.volumen;
     }
     @Override
     public String toString(){        
