@@ -14,7 +14,7 @@ public class Matricula {
     public Matricula(String nombreAlumno, String nombreAsignatura){
         this.nombreAlumno = nombreAlumno;
         this.nombreAsignatura = nombreAsignatura;
-        this.numeroMatricula = this.siguienteNúmeroMatricula++;
+        this.numeroMatricula = Matricula.siguienteNúmeroMatricula++;
     }
     
     //GETTERS
