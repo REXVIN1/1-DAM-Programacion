@@ -2,13 +2,13 @@
 package daw.persona;
 
 import java.util.ArrayDeque;
-import java.util.LinkedList;
 import java.util.Optional;
 import java.util.Queue;
 
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
 public class Bombo {
+    //VALORES
     private Queue<Bola> bolas;
     
     //CONSTRUCTOR
@@ -17,20 +17,19 @@ public class Bombo {
         if(totalBolas<101&&totalBolas>0){         
             for(int i=0;i<totalBolas;i++){
                 Bola b = new Bola(i);
-                bolas.add(b);
-            }                    }else{
-            System.out.println("Introduiciste un valor incorrecto, por favor eliga entre 1 y 100");
+                this.bolas.add(b);
+            }                    
+        }else{
+            System.out.println("Introduciste un valor incorrecto, por favor eliga entre 1 y 100");
         }       
     }
     
-//VALORES
-        //GETTERS
+    //GETTERS
     public int getNumeroBolas(){
-        return bolas.size();
+        return this.bolas.size();
     }
     public Optional<Bola> sacarBola(){
-        Optional<Bola> b = Optional.of(bolas);
+        Optional<Bola> b = Optional.of(this.bolas.poll());
         return b;
-    }
-        
+    }        
 }
