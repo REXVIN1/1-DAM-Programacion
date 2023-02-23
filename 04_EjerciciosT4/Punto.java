@@ -7,12 +7,14 @@ import java.awt.Toolkit;
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
 public class Punto {
+    //VALORES
     private int x;
     private int y;
     
+    //CONSTRUCTORES
     public Punto(){
-        x=0;
-        y=0;
+        this.x=0;
+        this.y=0;
     };
     public Punto(int x, int y){
         Toolkit tol = Toolkit.getDefaultToolkit();
@@ -21,34 +23,31 @@ public class Punto {
         y = 0;
     };
     public Punto(Punto p){
-        x = (p.x+0)/2;
-        y = (p.y+0)/2;        
+        this.x = (p.x+0)/2;
+        this.y = (p.y+0)/2;        
     };
     public Punto(double angulo, double distancia){
         double x1 = Math.sin(angulo)*distancia;
         int x2 = (int) x1;
-        x = x2;
+        this.x = x2;
         double y1 = Math.cos(angulo)*distancia;
         int y2 = (int) y1;
-        y = y2;
-    };
+        this.y = y2;
+    };    
     
-    
-    //SETTERS
-    
+    //SETTERS    
     public void setX(int x1){
-        x = x1;
+        this.x = x1;
     }
     public void setY(int y1){
-        y = y1;
+        this.y = y1;
     }
     
-    //GETTERS
-    
+    //GETTERS    
     public int getX(){
-        return x;
+        return this.x;
     }
     public int getY(){
-        return y;
+        return this.y;
     }
 }

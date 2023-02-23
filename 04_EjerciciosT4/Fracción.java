@@ -1,3 +1,4 @@
+
 package daw.persona;
 
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
@@ -21,7 +22,7 @@ public class Fracción {
         return this.denominador;
     }
     public double getValorReal(){
-        double n = (double) numerador, n2 = (double) denominador;;
+        double n = (double) numerador, n2 = (double) denominador;
         return n/n2;
     }
     public Fracción getInversa(){

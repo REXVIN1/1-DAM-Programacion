@@ -6,38 +6,40 @@ import java.util.HashMap;
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
 public class DNI {
+    //VALORES
     private int numero;
-    private char letra;
-    char letra2;
-    HashMap hm = new HashMap();
+    private char letra;       
     
+    //CONSTRUCTORES
     public DNI(){}
     public DNI(int n){
-        numero = n;
+        this.numero = n;
         DNI dni = new DNI();
-        letra = dni.calcularLetra(n);
+        this.letra = dni.calcularLetra(n);
     }
     public DNI(int n, char c){
-        numero = n;
-        letra = c;
-    };
+        this.numero = n;
+        this.letra = c;
+    }
     public DNI(String s){
+        char letra2;
         if(s.length()==9){
             letra2 = s.charAt(8);
             String digitos = s.substring(0, 8);       
-            letra = letra2;
-            numero = Integer.parseInt(digitos);                           
+            this.letra = letra2;
+            this.numero = Integer.parseInt(digitos);                           
         }
-    };
+    }
     
     //GETTERS
     public int getNumero(){
-        return numero;
+        return this.numero;
     }
     public char getLetra(){
-        return letra;
+        return this.letra;
     }
     private char calcularLetra(int n){
+        HashMap hm = new HashMap();
         int op = n%23;
         hm.put(0, 'T');
         hm.put(1, 'R');
@@ -63,7 +65,7 @@ public class DNI {
         hm.put(21, 'K');
         hm.put(22, 'E');
         char tochar = (char)hm.get(op);
-        letra = tochar;
-        return letra;
+        this.letra = tochar;
+        return this.letra;
     }
 }

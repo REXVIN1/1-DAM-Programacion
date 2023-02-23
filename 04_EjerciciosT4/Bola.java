@@ -13,7 +13,13 @@ public class Bola {
     }
     
     //GETTERS
-    public int getNumeroBolas(){
+    public int getNumero(){
         return this.numero;
-    }            
+    } 
+    
+    @Override
+    public String toString(){
+        String s = "bola";
+        return s;
+    }
 }

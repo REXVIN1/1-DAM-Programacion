@@ -1,8 +1,6 @@
 
 package daw.persona;
 
-import java.util.ArrayList;
-
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
 public class EquipoMusica {
@@ -22,8 +20,7 @@ public class EquipoMusica {
     public Altavoz getAltavoz(int posicion){
         return this.altavoces[posicion];
     }
-    
-    
+      
     //SETTERS
     public void setVolumen(int numeroAltavoz, int volumen){
         this.altavoces[numeroAltavoz].setVolumen(volumen); 

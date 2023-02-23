@@ -7,44 +7,43 @@ import java.util.Random;
 
 public class CuentaCorriente {
     private int numero;
-    private double saldo;
-    
+    private double saldo;    
     
     public CuentaCorriente(){
         Random r = new Random();
-        numero = r.nextInt(0, 1000);
+        this.numero = r.nextInt(0, 1000);
     }
     public CuentaCorriente(int numero2){
-        numero=numero2;
+        this.numero=numero2;
     }
     public CuentaCorriente(int numero2,double saldo2){
-        numero=numero2;
-        saldo=saldo2;
+        this.numero=numero2;
+        this.saldo=saldo2;
     }
     
     //SETTERS
     public int getNumeroCuenta(){
-        return numero;
+        return this.numero;
     }
     public double getSaldo(){
-        return saldo;
+        return this.saldo;
     }
 
     //GETTERS
     public void añadirDinero(double cantidad){
-        saldo += cantidad;
+        this.saldo += cantidad;
     }
     public void retirarDinero(double cantidad){
-        saldo -= cantidad;
+        this.saldo -= cantidad;
     }
     public void setNumCuenta(int c){
         if(c<=1000&&c>=0){
-            numero = c;
+            this.numero = c;
         }        
     }
     public void retirarDinero(int cantidad) throws Exception{
-        if(cantidad<=saldo){
-            saldo -= cantidad;
+        if(cantidad<=this.saldo){
+            this.saldo -= cantidad;
         }else{
             Exception e = new Exception("Dinero insuficiente");
             throw e;

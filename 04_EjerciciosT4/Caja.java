@@ -1,3 +1,4 @@
+
 package daw.persona;
 
 import java.util.Optional;
@@ -19,8 +20,8 @@ public class Caja {
         }
     }
     public Caja(boolean a,String m){
-        abierto = a;
-        mensaje = m;
+        this.abierto = a;
+        this.mensaje = m;
     };
     public Caja(){
         this.mensaje = "Viva el tema 7";
@@ -29,12 +30,12 @@ public class Caja {
     
     //SETTERS
     public void setMensaje(String m){
-        if(abierto){
+        if(this.abierto){
             this.mensaje = m;            
         }
     }
     public void pasarMayusculas(){
-        this.mensaje = mensaje.toUpperCase();
+        this.mensaje = this.mensaje.toUpperCase();
     }
     public void abrir(){
         this.abierto = true;
@@ -42,8 +43,11 @@ public class Caja {
     public void cerrar(){
         this.abierto = false;
     }
+    
+    
+    //GETTERS
     public Optional<String> getMensaje2(){
-        if(abierto){
+        if(this.abierto){
             Optional<String> o = Optional.of(this.mensaje);
             return o; 
         }else{
@@ -51,11 +55,8 @@ public class Caja {
             return o;
         }  
     }
-    
-    
-    //GETTERS
     public String getMensaje(){
-        if(abierto){
+        if(this.abierto){
            return this.mensaje; 
         }else{
             return null;

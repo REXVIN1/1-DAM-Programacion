@@ -56,5 +56,6 @@ public class CajeroAutomatico implements Adinerado{
                 "Billetes de 5€: "+billetes.get(5)+"\n"+
                 "Monedas de 1€:"+billetes.get(1);        
         return s;
-    }    
+    }
+    
 }

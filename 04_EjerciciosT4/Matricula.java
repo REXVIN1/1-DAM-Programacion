@@ -14,13 +14,13 @@ public class Matricula {
     public Matricula(String nombreAlumno, String nombreAsignatura){
         this.nombreAlumno = nombreAlumno;
         this.nombreAsignatura = nombreAsignatura;
-        this.numeroMatricula = Matricula.siguienteNúmeroMatricula++;
+        this.numeroMatricula = this.siguienteNúmeroMatricula++;
     }
     
     //GETTERS
     public String getNombre(){
         return this.nombreAlumno;
-    }
+    }    
     public String getNombreAsignatura(){
         return this.nombreAsignatura;
     }
