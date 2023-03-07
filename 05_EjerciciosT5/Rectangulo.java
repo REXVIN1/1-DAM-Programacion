@@ -1,13 +1,13 @@
 
-package tema.pkg5;
+package tema5;
 
-/*@author usuario-tarde*/
+/*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
-public class Rectangulo {    
-    //VALORES
-    public int base;
-    public int altura;
-    public int area;
+public class Rectangulo {
+    //VALORES 
+    private int base;
+    private int altura;
+    private final int area;
     
     //CONSTRUCTOR
     public Rectangulo(int base, int altura) {
@@ -38,9 +38,9 @@ public class Rectangulo {
     //TO STRING
     @Override
     public String toString(){
-        String s = "Base: "+this.base+
-                "\nAltura: "+this.altura+
-                "\nArea: "+this.area;
+        String s = "RECTANGULO (en centimetros):\nBase: "+this.base+" cm"+
+                "\nAltura: "+this.altura+" cm"+
+                "\nArea: "+this.area+" cm^2";
         return s;
     }
 }
