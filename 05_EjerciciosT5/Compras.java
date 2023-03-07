@@ -1,22 +1,23 @@
 
-package tema.pkg5;
+
+package tema5;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/*@author usuario-tarde*/
+/*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
 public class Compras {
-    //VALORES
-    public double presupuesto;
-    public List<Double> precios = new ArrayList<>();
+    //VALORES 
+    private double presupuesto;
+    private List<Double> precios = new ArrayList<>();
     
     //CONSTRUCTOR
     public Compras(double presupuesto) {
         this.presupuesto = presupuesto;
     }
     
-    //GETTER
+    //SETTER
     public void registrarCompra(double dinero) throws Exception{
         if(dinero<=this.presupuesto&&dinero>=0){
             this.precios.add(dinero);
@@ -25,11 +26,23 @@ public class Compras {
             throw new Exception("No hay suficiente presupuesto");
         }         
     }
+    public void setPresupuesto(double p){
+        this.presupuesto = p;
+    }
+    
+    //GETTERS
+    public double getPresupuesto(){
+        return this.presupuesto;
+    }
+    
+    public int getTotalArticulosComprados(){
+        return this.precios.size();
+    }
     
     //TO STRING
     @Override
     public String toString(){
-        String s = "Presupuesto: "+this.presupuesto+
+        String s = "COMPRA:\nPresupuesto: "+this.presupuesto+
                 "\nPrecios: "+this.precios;
         return s;
     }
