@@ -6,7 +6,7 @@ package tema5;
 public class CasaRural extends Hotel{
     //CONSTRUCTOR
     public CasaRural(String d, int np, int m){
-        super(d, np=3, m=6);
+        super(d, 3, 6);
     }
     
     //TO STRING
