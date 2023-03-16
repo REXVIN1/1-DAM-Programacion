@@ -1,5 +1,4 @@
 
-
 package tema5;
 
 import java.util.ArrayList;
@@ -34,7 +33,6 @@ public class Compras {
     public double getPresupuesto(){
         return this.presupuesto;
     }
-    
     public int getTotalArticulosComprados(){
         return this.precios.size();
     }
