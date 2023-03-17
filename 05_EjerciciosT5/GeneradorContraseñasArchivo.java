@@ -26,31 +26,15 @@ public class GeneradorContraseñasArchivo extends GeneradorContraseñas{
     //SETTERS
     @Override
     public String generarContraseña(int longitud){
-        StringBuilder contraseña = new StringBuilder();
-        int r2;
-        for(int i=0;i<longitud;i++){
-            r2 = this.random.nextInt(0, 2);
-            if(r2==0){
-                char c = (char)this.random.nextInt(48, 57);
-                contraseña.append(c);
-            }
-            if(r2==1){
-                char c = (char)this.random.nextInt(65, 90);
-                contraseña.append(c);
-            }
-            if(r2==2){
-                char c = (char)this.random.nextInt(97, 122);
-                contraseña.append(c);
-            }
-        }
+        String contraseña = GeneradorContraseñasArchivo.super.generarContraseña();
         try {
             FileWriter fw = new FileWriter(this.archivo);
             if(this.archivo.exists()){
-                fw.write(contraseña.toString());
+                fw.write(contraseña);
             }else{
                 this.archivo.createNewFile();
             }
         } catch (IOException ex) {}
-        return contraseña.toString();
+        return contraseña;
     }
 }

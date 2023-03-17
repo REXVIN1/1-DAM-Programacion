@@ -18,63 +18,56 @@ public class GeneradorContraseñasUnicas extends GeneradorContraseñas{
         this.contraseñasGeneradas = new HashSet<>();
     }
     public GeneradorContraseñasUnicas(Random r){
-        this.random = r;
+        super(r);
         this.contraseñasGeneradas = new HashSet<>();
     }
     
     //SETTERS
+    @Override
     public String generarContraseña(int longitud){
         StringBuilder contraseña = new StringBuilder();
-        int r2;
-        boolean b = true;
-        while(b){
-            for(int i=0;i<longitud;i++){
-                r2 = this.random.nextInt(0, 2);
-                if(r2==0){
-                    char c = (char)this.random.nextInt(48, 57);
-                    contraseña.append(c);
+        char caracter;
+        for(int i=0;i<longitud;i++){
+            switch(this.random.nextInt(0, 2)){
+                case 0 -> {
+                    caracter = (char) this.random.nextInt(48, 57);
+                    contraseña.append(caracter);
                 }
-                if(r2==1){
-                    char c = (char)this.random.nextInt(65, 90);
-                    contraseña.append(c);
+                case 1 -> {
+                    caracter = (char) this.random.nextInt(65, 90);
+                    contraseña.append(caracter);
                 }
-                if(r2==2){
-                    char c = (char)this.random.nextInt(97, 122);
-                    contraseña.append(c);
+                case 2 -> {
+                    caracter = (char) this.random.nextInt(97, 122);
+                    contraseña.append(caracter);
                 }
-            }
-            if(!this.contraseñasGeneradas.contains(contraseña.toString())){
-                this.contraseñasGeneradas.add(contraseña.toString());
-                b = false;
             }
         }
+        this.contraseñasGeneradas.add(contraseña.toString());
         return contraseña.toString();
     }
+    
+    @Override
     public String generarContraseña(){
         StringBuilder contraseña = new StringBuilder();
-        int r2;
-        boolean b = true;
-        while(b){
-            for(int i=0;i<12;i++){
-                r2 = this.random.nextInt(0, 2);
-                if(r2==0){
-                    char c = (char)this.random.nextInt(48, 57);
-                    contraseña.append(c);
+        char caracter;
+        for(int i=0;i<12;i++){
+            switch(this.random.nextInt(0, 2)){
+                case 0 -> {
+                    caracter = (char) this.random.nextInt(48, 57);
+                    contraseña.append(caracter);
                 }
-                if(r2==1){
-                    char c = (char)this.random.nextInt(65, 90);
-                    contraseña.append(c);
+                case 1 -> {
+                    caracter = (char) this.random.nextInt(65, 90);
+                    contraseña.append(caracter);
                 }
-                if(r2==2){
-                    char c = (char)this.random.nextInt(97, 122);
-                    contraseña.append(c);
+                case 2 -> {
+                    caracter = (char) this.random.nextInt(97, 122);
+                    contraseña.append(caracter);
                 }
-            }
-            if(!this.contraseñasGeneradas.contains(contraseña.toString())){
-                this.contraseñasGeneradas.add(contraseña.toString());
-                b = false;
             }
         }
+        this.contraseñasGeneradas.add(contraseña.toString());
         return contraseña.toString();
     }
 }

@@ -21,40 +21,42 @@ public class GeneradorContraseñas {
     //SETTERS
     public String generarContraseña(int longitud){
         StringBuilder contraseña = new StringBuilder();
-        int r2;
+        char caracter;
         for(int i=0;i<longitud;i++){
-            r2 = this.random.nextInt(0, 2);
-            if(r2==0){
-                char c = (char)this.random.nextInt(48, 57);
-                contraseña.append(c);
-            }
-            if(r2==1){
-                char c = (char)this.random.nextInt(65, 90);
-                contraseña.append(c);
-            }
-            if(r2==2){
-                char c = (char)this.random.nextInt(97, 122);
-                contraseña.append(c);
+            switch(this.random.nextInt(0, 2)){
+                case 0 -> {
+                    caracter = (char) this.random.nextInt(48, 57);
+                    contraseña.append(caracter);
+                }
+                case 1 -> {
+                    caracter = (char) this.random.nextInt(65, 90);
+                    contraseña.append(caracter);
+                }
+                case 2 -> {
+                    caracter = (char) this.random.nextInt(97, 122);
+                    contraseña.append(caracter);
+                }
             }
         }
         return contraseña.toString();
     }
     public String generarContraseña(){
         StringBuilder contraseña = new StringBuilder();
-        int r2;
+        char caracter;
         for(int i=0;i<8;i++){
-            r2 = this.random.nextInt(0, 2);
-            if(r2==0){
-                char c = (char)this.random.nextInt(48, 57);
-                contraseña.append(c);
-            }
-            if(r2==1){
-                char c = (char)this.random.nextInt(65, 90);
-                contraseña.append(c);
-            }
-            if(r2==2){
-                char c = (char)this.random.nextInt(97, 122);
-                contraseña.append(c);
+            switch(this.random.nextInt(0, 2)){
+                case 0 -> {
+                    caracter = (char) this.random.nextInt(48, 57);
+                    contraseña.append(caracter);
+                }
+                case 1 -> {
+                    caracter = (char) this.random.nextInt(65, 90);
+                    contraseña.append(caracter);
+                }
+                case 2 -> {
+                    caracter = (char) this.random.nextInt(97, 122);
+                    contraseña.append(caracter);
+                }
             }
         }
         return contraseña.toString();

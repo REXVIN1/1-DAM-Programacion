@@ -7,7 +7,7 @@ import java.util.Set;
 
 /*@author usuario-tarde*/
 
-public class GeneradorContraseñasRaras {
+public class GeneradorContraseñasRaras extends GeneradorContraseñasUnicas{
     //VALORES
     private Random random;
     private Set<String> contraseñasGeneradas;
@@ -25,50 +25,31 @@ public class GeneradorContraseñasRaras {
     //SETTERS
     public String generarContraseña(int longitud){
         StringBuilder contraseña = new StringBuilder();
-        int r2;
-        boolean b = true;
-        while(b){
-            for(int i=0;i<longitud;i++){
-                r2 = this.random.nextInt(0, 2);
-                if(r2==0){
-                    int c2 = 0;
-                    while(c2>255){
-                        char c = (char)this.random.nextInt(48, 57);
-                        c2 = (int) c+122;
-                        if(c2<=255){
-                            char c3 = (char) c2;
-                            contraseña.append(c3);
-                        }
-                    }
+        char caracter;
+        int caracter2;
+        for(int i=0;i<longitud;i++){
+            switch(this.random.nextInt(0, 2)){
+                case 0 -> {
+                    caracter = (char) this.random.nextInt(48, 57);
+                    caracter2 = (int) caracter+122;
+                    caracter = (char) caracter2;
+                    contraseña.append(caracter);
                 }
-                if(r2==1){
-                    int c2 = 0;
-                    while(c2>255){
-                        char c = (char)this.random.nextInt(65, 90);
-                        c2 = (int) c+122;
-                        if(c2<=255){
-                            char c3 = (char) c2;
-                            contraseña.append(c3);
-                        }
-                    }
+                case 1 -> {
+                    caracter = (char) this.random.nextInt(65, 90);
+                    caracter2 = (int) caracter+122;
+                    caracter = (char) caracter2;
+                    contraseña.append(caracter);
                 }
-                if(r2==2){
-                    int c2 = 0;
-                    while(c2>255){
-                        char c = (char)this.random.nextInt(97, 122);
-                        c2 = (int) c+122;
-                        if(c2<=255){
-                            char c3 = (char) c2;
-                            contraseña.append(c3);
-                        }
-                    }
+                case 2 -> {
+                    caracter = (char) this.random.nextInt(97, 122);
+                    caracter2 = (int) caracter+122;
+                    caracter = (char) caracter2;
+                    contraseña.append(caracter);
                 }
-            }
-            if(!this.contraseñasGeneradas.contains(contraseña.toString())){
-                this.contraseñasGeneradas.add(contraseña.toString());
-                b = false;
             }
         }
+        this.contraseñasGeneradas.add(contraseña.toString());
         return contraseña.toString();
     }
 }
