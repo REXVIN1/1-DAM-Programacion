@@ -27,7 +27,17 @@ public class GeneradorContraseñasInvertidas extends GeneradorContraseñasUnicas
     //SETTERS
     @Override
     public String generarContraseña(int longitud){
-        StringBuilder c = new StringBuilder(GeneradorContraseñasInvertidas.super.generarContraseña());
-        return c.reverse().toString().toLowerCase();
+        StringBuilder contraseña = new StringBuilder(GeneradorContraseñasInvertidas.super.generarContraseña());
+        contraseña = contraseña.reverse();
+        String contraseña2 = "";
+        for(char c : contraseña.toString().toCharArray()){
+            if(Character.isLowerCase(c)){
+                contraseña2 += Character.toUpperCase(c);
+            }
+            if(Character.isUpperCase(c)){
+                contraseña2 += Character.toLowerCase(c);
+            }
+        }
+        return contraseña2;
     }
 }
