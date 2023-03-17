@@ -7,8 +7,8 @@ import java.time.Instant;
 
 public class Adivinanza{
     //PROPIEDADES
-    private String enunciado;
-    private String respuestaCorrecta;
+    private final String enunciado;
+    private final String respuestaCorrecta;
     private Instant inicio;
     
     /*
@@ -20,6 +20,7 @@ public class Adivinanza{
     public Adivinanza(String e, String rc){
         this.enunciado = e;
         this.respuestaCorrecta = rc;
+        this.inicio = null;
     }
     
     //GETTER
@@ -38,5 +39,11 @@ public class Adivinanza{
         if(!respuesta.equalsIgnoreCase(this.respuestaCorrecta)){
             throw new AdivinanzaIncorrectaException("La respuesta es incorrecta");
         }
+    }
+    
+    //TO STRING
+    @Override
+    public String toString(){
+        return "ADIVINANZA\nEnunciado: "+this.enunciado;
     }
 }

@@ -14,11 +14,16 @@ public class Futbolista extends EmpleadoPrimable{
         this.dorsal = d;
     }
     
+    //GETTERS
+    public int getDorsal(){
+        return this.dorsal;
+    }
+    
     //TO STRING
     @Override
     public String toString(){
-        String s = "FUTBOLISTA:\nNombre: "+this.getNombre()+
-                "\nSueldo: "+this.getSueldo()+
+        String s = "FUTBOLISTA:\nNombre: "+Futbolista.super.getNombre()+
+                "\nSueldo: "+Futbolista.super.getSueldo()+
                 "\nDorsal: "+this.dorsal;
         return s;
     }

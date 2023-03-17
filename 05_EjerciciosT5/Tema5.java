@@ -14,8 +14,64 @@ public class Tema5 {
     public static void main(String[] args) throws AdivinanzaIncorrectaException, TiempoSuperadoException, InterruptedException {
             
             /*
+            PAQUETES
+        
+            Paquete p1 = new Paquete("rueda", "Emperatriz Eugenia 21", 1);
+            Paquete p2 = new Paquete("tuberia", "Emperatriz Eugenia 50", 2);
+            Paquete p3 = new Paquete("tuberia", "Emperatriz Eugenia 50", 3);
+            Paquete p4 = new Paquete("tuberia", "Emperatriz Eugenia 50", 1);
+            
+            System.out.println(p1);
+            System.out.println(p1.equals(p2));
+            System.out.println(p1.hashCode());
+            System.out.println(p1.compareTo(p2)+"\n");
+            
+            Transportista t = new Transportista(1);
+            t.subirCamion(p1);
+            t.subirCamion(p2);
+            t.subirCamion(p3);
+            t.subirCamion(p4);
+            t.enviar();
+            System.out.println(t+"\n");
+        
+            TransportistaOrdenado t2 = new TransportistaOrdenado(1);
+            t2.subirCamion(p1);
+            t2.subirCamion(p2);
+            t2.subirCamion(p3);
+            t2.subirCamion(p4);
+            t2.enviar();
+            System.out.println("\n"+t2);
+                
+            PaquetesPepe pp = new PaquetesPepe();
+            pp.registrarPedido(p1);
+            pp.registrarPedido(p2);
+            pp.registrarPedido(p3);
+            pp.registrarPedido(p4);
+            pp.enviarPaquetes();
+            System.out.println("\n"+pp+"\n");
+        
+            EmpresaPremium ep = new EmpresaPremium();
+            ep.registrarPedido(p1);
+            ep.registrarPedido(p2);
+            ep.registrarPedido(p3);
+            ep.registrarPedido(p4);
+            ep.enviarPaquetes();
+            System.out.println("\n"+ep);
+        
+            EmpresaLowCost elc = new EmpresaLowCost(4);
+            elc.registrarPedido(p1);
+            elc.registrarPedido(p2);
+            elc.registrarPedido(p3);
+            elc.registrarPedido(p4);
+            elc.enviarPaquetes();
+            System.out.println("\n"+elc);
+            */
+            
+        
+            /*
             GENERADOR CONTRASEÑAS
         
+            */
             GeneradorContraseñas gc = new GeneradorContraseñas();
             GeneradorContraseñasUnicas gcu = new GeneradorContraseñasUnicas();
             GeneradorContraseñasArchivo gca = new GeneradorContraseñasArchivo("C:/Users/kevin/Desktop/PRUEBA.docx");
@@ -30,7 +86,6 @@ public class Tema5 {
             
             String contraseña = "hola";
             String s;
-            */
             
             /*
             ADIVINANZAS

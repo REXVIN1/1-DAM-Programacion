@@ -10,7 +10,7 @@ public class TrabajadorTecleante extends Trabajador implements Teclado{
     
     //CONSTRUCTOR
     public TrabajadorTecleante(String n, int s, int ndni, char ldni, int ppm){
-        super(n,s,ndni,ldni);
+        super(n, s, ndni, ldni);
         this.pulsacionesMinuto = ppm;
     }
     

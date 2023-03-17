@@ -25,6 +25,7 @@ public class GeneradorContraseñasInvertidas extends GeneradorContraseñasUnicas
     }
     
     //SETTERS
+    @Override
     public String generarContraseña(int longitud){
         StringBuilder contraseña = new StringBuilder();
         int r2;

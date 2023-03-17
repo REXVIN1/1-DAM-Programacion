@@ -9,11 +9,12 @@ import java.util.List;
 public class Compras {
     //VALORES 
     private double presupuesto;
-    private List<Double> precios = new ArrayList<>();
+    private final List<Double> precios;
     
     //CONSTRUCTOR
     public Compras(double presupuesto) {
         this.presupuesto = presupuesto;
+        this.precios = new ArrayList<>();
     }
     
     //SETTER

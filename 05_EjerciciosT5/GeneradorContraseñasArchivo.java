@@ -24,6 +24,7 @@ public class GeneradorContraseñasArchivo extends GeneradorContraseñas{
     }
     
     //SETTERS
+    @Override
     public String generarContraseña(int longitud){
         StringBuilder contraseña = new StringBuilder();
         int r2;

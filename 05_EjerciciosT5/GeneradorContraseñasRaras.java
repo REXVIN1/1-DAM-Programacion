@@ -1,7 +1,6 @@
 
 package tema5;
 
-import java.io.File;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -10,7 +9,6 @@ import java.util.Set;
 
 public class GeneradorContraseñasRaras {
     //VALORES
-    private File archivo;
     private Random random;
     private Set<String> contraseñasGeneradas;
     

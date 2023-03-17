@@ -5,7 +5,7 @@ package tema5;
 
 public class CuerpoTecnico extends Empleado{
     //PROPIEDADES
-    private String puesto;
+    private final String puesto;
     
     //CONSTRUCTOR
     public CuerpoTecnico(String n, double s, String p) {
@@ -21,8 +21,8 @@ public class CuerpoTecnico extends Empleado{
     //TO STRING
     @Override
     public String toString(){
-        String s = "CUERPO TÉCNICO:\nNombre: "+this.getNombre()+
-                "\nSueldo: "+this.getSueldo()+
+        String s = "CUERPO TÉCNICO:\nNombre: "+CuerpoTecnico.super.getNombre()+
+                "\nSueldo: "+CuerpoTecnico.super.getSueldo()+
                 "\nPuesto: "+this.puesto;
         return s;
     }

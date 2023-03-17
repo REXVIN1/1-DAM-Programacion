@@ -5,8 +5,8 @@ package tema5;
 
 public class Empleado implements Nombrable{
     //PROPIEDADES
-    private String nombre;
-    private double sueldo;
+    private final String nombre;
+    private final double sueldo;
     private double dinero;
     
     //CONSTRUCTOR

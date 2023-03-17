@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
 
 public class Hotel extends Edificio{
     //VALORES
-    private List<String> clientes = new ArrayList<>();;
+    private final List<String> clientes;
     private int maximo;
     
     /*
@@ -23,6 +23,7 @@ public class Hotel extends Edificio{
         super(d,np);
         if(m>=0){
             this.maximo = m;
+            this.clientes = new ArrayList<>();
         }else{
             throw new IllegalArgumentException("Introduzca un valor positivo");
         }
