@@ -7,7 +7,7 @@ import java.awt.Point;
 
 /*@author Kevin Gómez Valderas<kgomval118@g.educaand.es>*/
 
-public class Rectangulo implements Centrable, Apoyable{
+public class Rectangulo implements Centrable, Apoyable, FiguraGeometrica{
     
     //VARIABLES
     protected Point esquinaSuperiorIzquierda;
@@ -63,7 +63,7 @@ public class Rectangulo implements Centrable, Apoyable{
 
     @Override
     public void dibujar(Graphics g) {
-        
+        g.create();
     }
 
     @Override
